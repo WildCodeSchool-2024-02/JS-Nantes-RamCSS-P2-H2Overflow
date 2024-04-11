@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+/* .cabin-<uniquifier> {
+    font-family: "Cabin", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  } */
+
+  /* .figtree-<uniquifier> {
+    font-family: "Figtree", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+  } */
+
+header{
+    left: 0;
+    width: 25vw;
+    height: 200px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.earth-3D{
+    width: 100%;
+}
+
+canvas{
+    position: relative;
+    left: -33px ;
+    max-width: 400px;
+    max-height: 200px;
+}
+
+h1{
+    position: relative;
+    left: -70px ;
+    z-index: 1;
+    font-family: "figtree";
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: 10px;
+}

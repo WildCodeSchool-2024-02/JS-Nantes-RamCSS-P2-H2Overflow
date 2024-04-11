@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.earth-3D{
+    width: 100%;
+    z-index: 0;    
+    width: 70vw;
+    height: 70vh;
+}
+
+canvas{
+    z-index: 0;
+    position: relative;
+    left: -470px ;
+    max-height: 70vh;
+    max-width: 70vw;
+    animation: 3000ms earth-appearance  ease-in-out;
+
+
+}
+
+h1{
+    position: relative;
+    z-index: 1;
+    font-family: "figtree";
+    font-size: 8rem;
+    font-weight: 800;
+    letter-spacing: 10px;
+}
+
+@keyframes earth-appearance  {
+    0% {
+      transform: translateX(-200%);
+    }
+
+    50% {
+      transform: translateX(+30%);
+    }
+
+    80% {
+      transform: translateX(-5%);
+    }
+
+    /* 90% {
+      transform: translateX(-2%);
+    } */
+  
+    100% {
+      transform: translateX(0%);
+    }
+  }
