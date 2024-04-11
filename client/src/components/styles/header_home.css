@@ -19,10 +19,14 @@ canvas{
     left: -470px ;
     max-height: 70vh;
     max-width: 70vw;
-    animation-delay: 2s;
-    animation: 5000ms earth-appearance  cubic-bezier(.73,.18,.29,.96);
-
-
+    background-color: rgba(0, 0, 0, 0);
+    transform: scale(0)
+  }
+  
+.canvas-animate{
+  animation-delay: 2s;
+  animation: 3500ms earth-appearance  cubic-bezier(.73,.18,.29,.96);
+  transform: scale(1)
 }
 
 h1{
@@ -33,7 +37,6 @@ h1{
     font-weight: 800;
     letter-spacing: 10px;
     animation: 1000ms aparition-h1  ease-in-out;
-
 }
 
 @keyframes earth-appearance  {
@@ -43,7 +46,7 @@ h1{
   }
 
   30% {
-    transform: scale(0) translateX(+50%);
+    transform: scale(0) translateX(+100%);
   }
 
   100% {
