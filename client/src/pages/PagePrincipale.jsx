@@ -1,5 +1,6 @@
 import Map from "../components/Map";
 import '../components/styles/PagePrincipale.css'
+import '../components/styles/header.css'
 
 function PagePrincipale() {
     return (
@@ -10,3 +11,4 @@ function PagePrincipale() {
 }
 
 export default PagePrincipale;
+// <Groundwatercard />
