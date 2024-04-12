@@ -7,7 +7,7 @@
 
 /* Bouton et texte de la page de chargement /LUCAS/ */
 .PLoader{
-  position:sticky
+  position:sticky;
  display: flex;
 padding-left:205rem;
  font-size: 4rem;
