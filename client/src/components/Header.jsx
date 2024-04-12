@@ -1,60 +1,66 @@
-import { useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
-import './styles/header_home.css'
-// import './styles/header.css'
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'; // Import correct
+import './styles/header_home.css';
 
 function Header() {
+    const [isLoaded, setIsLoaded] = useState(false);
+
+    const canvas = useRef();
+    const camera = useRef();
+    const scene = useRef();
+    const renderer = useRef();
+    const controls = useRef();
 
     useEffect(() => {
-
-        const scene = new THREE.Scene();
-        const ambientLight = new THREE.AmbientLight(0xffffff, 7); // effet de lumière sur la terre
-        const camera = new THREE.PerspectiveCamera(5, window.innerWidth / window.innerHeight, 0.1, 1000);
-        const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('3d-canvas') });
-        scene.background = new THREE.Color("rgba(255, 255, 255, 1)"); 
-        scene.add(ambientLight);
-        renderer.setSize(window.innerWidth, window.innerHeight);
-
         const loader = new GLTFLoader();
-        
+        const width = window.innerWidth * 0.7; 
+        const height = window.innerHeight * 0.7;
+        const ambientLight = new THREE.AmbientLight(0xffffff, 7);
+        scene.current = new THREE.Scene();
+        camera.current = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 0.1, 1000);
+        renderer.current = new THREE.WebGLRenderer({ canvas: canvas.current });
+        scene.current.background = new THREE.Color("rgba(255, 255, 255, 1)"); 
+        scene.current.add(ambientLight);
+        renderer.current.setSize(width, height);
+        camera.current.position.z = 1000;
+        camera.current.fov = 100;
+        camera.current.updateProjectionMatrix();
+        controls.current = new OrbitControls(camera.current, renderer.current.domElement);
+
         loader.load(
-            '../src/assets/images/earth_3D.glb', // fichier_3D
+            '../src/assets/images/earth_3D.glb',
             (glb) => {
                 const earth = glb.scene;
-                scene.add(earth);
+                scene.current.add(earth);
+                setIsLoaded(true);
 
-                function animate(){
+                function animate() {
+                    earth.rotation.y += 0.002;
+                    renderer.current.render(scene.current, camera.current);
                     requestAnimationFrame(animate);
-                    earth.rotation.y += 0.002; // Vitesse de rotation
-                    renderer.render(scene, camera);
                 }
-
-                animate(); 
+                animate();
             },
-
-            // (xhr) => {
-            //     console.warn((xhr.loaded / xhr.total) * 100 + '% chargé');
-            // },
-
-            (err) => {
-                console.error('Erreur de chargement du modèle', err);
-            }
         );
 
-        camera.position.z = 0.9 ; // Augmentez pour zoomer
-        camera.fov = 30; // Diminuez pour dezoomer
-        camera.updateProjectionMatrix();
-    }, []); 
+        return () => {
+            controls.current.dispose();
+        };
+    }, []);
 
     return (
         <header>
             <h1>H²OVERFLOW</h1>
-            <div className='earth-3D'>
-                <canvas id="3d-canvas" />
+            <div>
+                <canvas 
+                    ref={canvas} 
+                    id="3d-canvas" 
+                    className={`earth-3D ${isLoaded ? 'canvas-animate' : ''}`}
+                />
             </div>
         </header>
-
     );
 }
 
