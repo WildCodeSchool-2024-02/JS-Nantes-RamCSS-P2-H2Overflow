@@ -4,3 +4,16 @@
   margin: 0;
   padding: 0;
 }
+
+/* Bouton et texte de la page de chargement /LUCAS/ */
+.PLoader{
+  position:sticky
+ display: flex;
+padding-left:205rem;
+ font-size: 4rem;
+}
+.buttonLoader{
+justify-content: center;
+align-items: center;
+
+}
