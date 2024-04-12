@@ -14,10 +14,21 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react-refresh"],
+  "plugins": [
+    "react-refresh"
+  ],
   "rules": {
     "react/prop-types": "off",
-    "no-console": ["error", { "allow": ["error", "info", "warn"] }],
+    "no-console": [
+      "error",
+      {
+        "allow": [
+          "error",
+          "info",
+          "warn"
+        ]
+      }
+    ],
     "react/react-in-jsx-scope": "off",
     "react/jsx-one-expression-per-line": "off",
     "react/no-unescaped-entities": "off",
