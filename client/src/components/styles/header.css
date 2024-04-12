@@ -1,20 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
-/* .cabin-<uniquifier> {
-    font-family: "Cabin", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
-    font-variation-settings:
-      "wdth" 100;
-  } */
-
-  /* .figtree-<uniquifier> {
-    font-family: "Figtree", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
-  } */
-
 header{
     left: 0;
     width: 25vw;
@@ -34,6 +17,7 @@ canvas{
     left: -33px ;
     max-width: 400px;
     max-height: 200px;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 h1{
