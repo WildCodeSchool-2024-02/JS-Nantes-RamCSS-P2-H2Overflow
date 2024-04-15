@@ -1,7 +1,7 @@
 import Header  from "../components/Header";
 import TextPageLoader from "../components/TextPageLoader";
 
-function Index() {
+function Home() {
 return(
 <> 
 <Header />
@@ -12,4 +12,4 @@ return(
 
 );
 }
-export default Index
+export default Home
