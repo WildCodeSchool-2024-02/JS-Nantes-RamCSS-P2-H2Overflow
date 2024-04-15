@@ -1,8 +1,6 @@
 import TextPageLoader from "../components/TextPageLoader";
 
 function Home() {
-  return (
-        <TextPageLoader />
-    );
+  return <TextPageLoader />;
 }
 export default Home;
