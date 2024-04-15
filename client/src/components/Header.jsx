@@ -1,10 +1,13 @@
 import { useEffect, useRef, useState } from "react";
+import { useLocation } from "react-router-dom"; // Importez useLocation depuis react-router-dom
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"; // Import correct
+import "./styles/header.css";
 
 function Header() {
   const [isLoaded, setIsLoaded] = useState(false);
+  const location = useLocation()
 
   const canvas = useRef();
   const camera = useRef();
@@ -55,13 +58,15 @@ function Header() {
   }, []);
 
   return (
-    <header>
-      <h1>H²OVERFLOW</h1>
+    <header
+      className={`header ${location.pathname === "/" ? "header-home" : ""}`}
+    >
+      <h1 className={`header ${location.pathname === "/" ? "h1-home":""}`} >H²OVERFLOW</h1>
       <div>
         <canvas
           ref={canvas}
           id="3d-canvas"
-          className={`earth-3D ${isLoaded ? "canvas-animate" : ""}`}
+          className={`header ${location.pathname === "/" ? "canvas-animate-home canvas-home earth-3D-home" : ""} earth-3D ${isLoaded ? "canvas-animate" : ""}`}
         />
       </div>
     </header>
