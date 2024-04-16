@@ -1,14 +1,15 @@
 import Map from "../components/Map";
+import Groundwatercard from "../components/Groundwatercard";
 import "../components/styles/PagePrincipale.css";
-import "../components/TextPageLoader";
+import "../components/styles/header.css";
 
 function PagePrincipale() {
   return (
     <>
-      <Map />{" "}
+      <Map />
+      <Groundwatercard />
     </>
   );
 }
 
 export default PagePrincipale;
-// <Groundwatercard />
