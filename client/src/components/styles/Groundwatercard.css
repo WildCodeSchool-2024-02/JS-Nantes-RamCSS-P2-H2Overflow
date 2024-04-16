@@ -1,56 +1,54 @@
-
-
 /* CSS Global component */
 
 .GWcontainer {
-    width: 446px;
-    height: 196px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    flex-shrink: 0;
-    /* background-color: #BBE4E9; */
-    display: flex;
-    flex-direction: column;
-    align-items: end;
+  width: 446px;
+  height: 196px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  flex-shrink: 0;
+  /* background-color: #BBE4E9; */
+  display: flex;
+  flex-direction: column;
+  align-items: end;
 }
 
 .level-legend {
-    font-family: 'Cabin';
+  font-family: "Cabin";
 }
 
 /* CSS Box level */
 
-.GWlevel{
-    width: 100%;
-    height: 157px;
-    border-radius: 20px;
-    flex-shrink: 0;
-    overflow: hidden;
-    background-color: rgba(255, 255, 255, 0.45);
-    backdrop-filter: blur(2px)
+.GWlevel {
+  width: 100%;
+  height: 157px;
+  border-radius: 20px;
+  flex-shrink: 0;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(2px);
 }
 
 .percentage-box {
-    background-color: rgba(255, 255, 255, 0.65);
-    border-radius: 10px;
-    width: 92px;
-    height: 36px;
-    margin-top: 10px;
-    margin-left: 8px;
+  background-color: rgba(255, 255, 255, 0.65);
+  border-radius: 10px;
+  width: 92px;
+  height: 36px;
+  margin-top: 10px;
+  margin-left: 8px;
 }
 
 .GWpercentage {
-    font-size: 40px;
-    font-family: 'Cabin';
-    font-weight: 700;
-    word-wrap: break-word;
-    line-height: normal;
-    flex-shrink: 0;
-    backdrop-filter: blur(8px);
-    border-radius: 10px;
+  font-size: 40px;
+  font-family: "Cabin";
+  font-weight: 700;
+  word-wrap: break-word;
+  line-height: normal;
+  flex-shrink: 0;
+  backdrop-filter: blur(8px);
+  border-radius: 10px;
 }
 
-.GWvisual-level{
-    width: 100%;
-    height: 150%;
-    margin-top: -50px;
+.GWvisual-level {
+  width: 100%;
+  height: 150%;
+  margin-top: -50px;
 }

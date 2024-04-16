@@ -1,13 +1,13 @@
 import Map from "../components/Map";
-import '../components/styles/PagePrincipale.css'
-import '../components/styles/header.css'
+import "../components/styles/PagePrincipale.css";
+import "../components/TextPageLoader";
 
 function PagePrincipale() {
-    return (
-        <>
-            <Map />
-        </>
-    );
+  return (
+    <>
+      <Map />{" "}
+    </>
+  );
 }
 
 export default PagePrincipale;
