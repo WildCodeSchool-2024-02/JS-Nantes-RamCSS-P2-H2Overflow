@@ -19,8 +19,9 @@ canvas {
   max-height: 200px;
 }
 
-/**********************************/
 .canvas-animate {
+  transition-timing-function: ease-in-out;
+
   animation-delay: 2s;
   animation: 2000ms earth-transition cubic-bezier(0.73, 0.18, 0.29, 0.96);
   /* transform: scale(1); */
@@ -65,6 +66,7 @@ h1 {
 }
 
 .canvas-animate-home {
+  transition-timing-function: ease-in-out;
   animation-delay: 2s;
   animation: 3500ms earth-appearance cubic-bezier(0.73, 0.18, 0.29, 0.96);
   transform: scale(1);
@@ -141,13 +143,3 @@ h1 {
     transform: translatey(0%);
   }
 }
-
-/* .search-input {
-    background-color: red;
-}
-
-header {
-    width: 100vw;
-    height: 90vh;
-    display: flex;
-} */

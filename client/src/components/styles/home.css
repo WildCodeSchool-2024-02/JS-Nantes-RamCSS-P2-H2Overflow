@@ -2,11 +2,13 @@
 
 body {
   background: rgb(187, 228, 233);
-  background: linear-gradient(
-    90deg,
+  background: radial-gradient(
+    circle,
     rgba(187, 228, 233, 1) 0%,
-    rgba(83, 168, 182, 1) 100%
+    rgba(83, 168, 182, 1) 70%
   );
+  background-size: 150vw;
+  background-position: right;
 }
 
 /* Bouton et texte de la page de chargement /LUCAS/ */
