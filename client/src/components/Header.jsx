@@ -1,11 +1,13 @@
 import { useEffect, useRef, useState } from "react";
+import { NavLink, useLocation } from "react-router-dom";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"; // Import correct
-import "./styles/header_home.css";
+import "./styles/header.css";
 
 function Header() {
   const [isLoaded, setIsLoaded] = useState(false);
+  const location = useLocation();
 
   const canvas = useRef();
   const camera = useRef();
@@ -26,7 +28,7 @@ function Header() {
       1000
     );
     renderer.current = new THREE.WebGLRenderer({ canvas: canvas.current });
-    scene.current.background = new THREE.Color("rgba(255, 255, 255, 1)");
+    scene.current.background = new THREE.Color("rgba(255, 255, 255, 0)");
     scene.current.add(ambientLight);
     renderer.current.setSize(width, height);
     camera.current.position.z = 1000;
@@ -56,15 +58,19 @@ function Header() {
   }, []);
 
   return (
-    <header>
-      <h1>H²OVERFLOW</h1>
-      <div>
+    <header
+      className={`header ${location.pathname === "/" ? "header-home" : ""}`}
+    >
+      <h1 className={`header ${location.pathname === "/" ? "h1-home" : ""}`}>
+        H²OVERFLOW
+      </h1>
+      <NavLink to="/">
         <canvas
           ref={canvas}
           id="3d-canvas"
-          className={`earth-3D ${isLoaded ? "canvas-animate" : ""}`}
+          className={`header ${location.pathname === "/" ? "canvas-animate-home canvas-home earth-3D-home" : ""} earth-3D ${isLoaded ? "canvas-animate" : ""}`}
         />
-      </div>
+      </NavLink>
     </header>
   );
 }
