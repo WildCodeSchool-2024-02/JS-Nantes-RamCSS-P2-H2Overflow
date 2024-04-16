@@ -9,10 +9,16 @@
 .PLoader {
   position: sticky;
   display: flex;
-  padding-left: 205rem;
-  font-size: 4rem;
+  margin-left: 65rem;
+  font-size: 1rem;
+  white-space: nowrap;
 }
-.buttonLoader {
+
+.Boutton {
+  display: flex;
   justify-content: center;
-  align-items: center;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 15px;
+  margin-bottom: 150px;
 }
