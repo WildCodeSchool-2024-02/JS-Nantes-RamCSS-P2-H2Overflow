@@ -17,7 +17,7 @@ canvas {
   left: -33px;
   max-width: 400px;
   max-height: 200px;
-  background-color: rgba(0, 0, 0, 0);
+  /* background-color: rgba(0, 0, 0, 0); */
 }
 
 /**********************************/
@@ -54,7 +54,7 @@ h1 {
   width: 70vw;
   height: 70vh;
   left: 900px;
-  top: 300px;
+  top: 500px;
 }
 
 .canvas-home {
@@ -63,7 +63,7 @@ h1 {
   /* left: -470px; */
   max-height: 70vh;
   max-width: 70vw;
-  background-color: rgba(0, 0, 0, 0);
+  /* background-color: rgba(0, 0, 0, 0); */
   transform: scale(0);
 }
 
