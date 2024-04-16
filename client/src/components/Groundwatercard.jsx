@@ -1,20 +1,35 @@
-import './styles/Groundwatercard.css'
+import "./styles/Groundwatercard.css";
 
 function Groundwatercard() {
+  const data = [{ profondeur_nappe: 4 }, { profondeur_investigation: 45 }];
 
-    return (
-        <>
-            <div className="GWcontainer">
-                <p className='level-legend'>Taux de remplissage actuel</p>
-                <div className="GWlevel">
-                    <div className='percentage-box'>
-                        <p className='GWpercentage'>40%</p>
-                    </div>
-                    <img className='GWvisual-level' src="../src/assets/images/watergroung_level.png" alt="water level" />
-                </div>
-            </div>
-        </>
-    );
-};
+  const profondeurNappe = data[0].profondeur_nappe;
+  const profondeurInvestigation = data[1].profondeur_investigation;
+
+  const percentage = Math.round(
+    ((profondeurInvestigation - profondeurNappe) / profondeurInvestigation) *
+      100
+  );
+
+  let marginTopWater = ((100 - percentage) / 100) * 177 - 85;
+  marginTopWater = Math.min(Math.max(marginTopWater, -85), 92);
+
+  return (
+    <div className="card-container">
+      <p className="legend-card">Taux de remplissage actuel</p>
+      <div className="card-visual-level">
+        <div className="percentage-box">
+          <p className="percentage-text">{percentage}%</p>
+        </div>
+        <img
+          className="img-water-level"
+          style={{ marginTop: `${marginTopWater}px` }}
+          src="../src/assets/images/watergroung_level.png"
+          alt="water level"
+        />
+      </div>
+    </div>
+  );
+}
 
 export default Groundwatercard;
