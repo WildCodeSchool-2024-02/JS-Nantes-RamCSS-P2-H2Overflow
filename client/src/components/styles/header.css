@@ -31,7 +31,7 @@ canvas {
 
 h1 {
   position: relative;
-  left: -70px;
+  /* left: -70px; */
   z-index: 1;
   font-family: "figtree";
   font-size: 4rem;
@@ -42,7 +42,7 @@ h1 {
 /****************************header-home*****************************************/
 .header-home {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
   padding-top: 50px;
@@ -53,12 +53,14 @@ h1 {
   z-index: 0;
   width: 70vw;
   height: 70vh;
+  left: 900px;
+  top: 300px;
 }
 
 .canvas-home {
   z-index: 0;
   position: relative;
-  left: -470px;
+  /* left: -470px; */
   max-height: 70vh;
   max-width: 70vw;
   background-color: rgba(0, 0, 0, 0);
@@ -67,7 +69,7 @@ h1 {
 
 .canvas-animate-home {
   animation-delay: 2s;
-  /* animation: 3500ms earth-appearance cubic-bezier(0.73, 0.18, 0.29, 0.96); */
+  animation: 3500ms earth-appearance cubic-bezier(0.73, 0.18, 0.29, 0.96);
   transform: scale(1);
 }
 
