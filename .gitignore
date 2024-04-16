@@ -3,9 +3,3 @@ node_modules
 .DS_Store
 .idea
 .vscode
-
-# Package-lock
-
-package-lock.json
-/client/package-lock.json
-/server/package-lock.json
