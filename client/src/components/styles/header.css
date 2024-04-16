@@ -17,7 +17,6 @@ canvas {
   left: -33px;
   max-width: 400px;
   max-height: 200px;
-  /* background-color: rgba(0, 0, 0, 0); */
 }
 
 /**********************************/
@@ -42,7 +41,6 @@ h1 {
 /****************************header-home*****************************************/
 .header-home {
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
   padding-top: 50px;
@@ -63,7 +61,6 @@ h1 {
   /* left: -470px; */
   max-height: 70vh;
   max-width: 70vw;
-  /* background-color: rgba(0, 0, 0, 0); */
   transform: scale(0);
 }
 
@@ -90,10 +87,12 @@ h1 {
 
   30% {
     transform: scale(0) translateX(+100%);
+    z-index: 1000;
   }
 
   100% {
     transform: scale(1) translateX(0%);
+    z-index: -1;
   }
 }
 
@@ -116,6 +115,7 @@ h1 {
 @keyframes earth-transition {
   0% {
     transform: scale(0);
+    z-index: 1000;
   }
 
   50% {
@@ -128,6 +128,7 @@ h1 {
 
   100% {
     transform: scale(1);
+    z-index: -1;
   }
 }
 
