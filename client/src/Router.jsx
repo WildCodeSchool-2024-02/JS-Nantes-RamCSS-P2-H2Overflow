@@ -13,6 +13,8 @@ const router = createBrowserRouter([
       {
         path: "",
         element: <Home />,
+        loader: () =>
+          fetch("https://hubeau.eaufrance.fr/api/v1/hydrobio/taxons"),
       },
       {
         path: "/map",
