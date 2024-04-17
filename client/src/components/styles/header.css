@@ -20,12 +20,133 @@ canvas {
   background-color: rgba(0, 0, 0, 0);
 }
 
+/**********************************/
+.canvas-animate {
+  animation-delay: 2s;
+  animation: 2000ms earth-transition cubic-bezier(0.73, 0.18, 0.29, 0.96);
+  /* transform: scale(1); */
+}
+
+/**********************************/
+
 h1 {
   position: relative;
-  left: -70px;
+  /* left: -70px; */
   z-index: 1;
   font-family: "figtree";
   font-size: 4rem;
   font-weight: 800;
   letter-spacing: 10px;
 }
+
+/****************************header-home*****************************************/
+.header-home {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.earth-3D-home {
+  width: 100%;
+  z-index: 0;
+  width: 70vw;
+  height: 70vh;
+  left: 900px;
+  top: 300px;
+}
+
+.canvas-home {
+  z-index: 0;
+  position: relative;
+  /* left: -470px; */
+  max-height: 70vh;
+  max-width: 70vw;
+  background-color: rgba(0, 0, 0, 0);
+  transform: scale(0);
+}
+
+.canvas-animate-home {
+  animation-delay: 2s;
+  animation: 3500ms earth-appearance cubic-bezier(0.73, 0.18, 0.29, 0.96);
+  transform: scale(1);
+}
+
+.h1-home {
+  position: relative;
+  z-index: 1;
+  font-family: "figtree";
+  font-size: 8rem;
+  font-weight: 800;
+  letter-spacing: 10px;
+  animation: 1000ms aparition-h1 ease-in-out;
+}
+
+@keyframes earth-appearance {
+  0% {
+    transform: scale(0) translateX(-200%);
+  }
+
+  30% {
+    transform: scale(0) translateX(+100%);
+  }
+
+  100% {
+    transform: scale(1) translateX(0%);
+  }
+}
+
+@keyframes aparition-h1 {
+  0% {
+    transform: translatey(-200%);
+  }
+
+  100% {
+    transform: translatey(0%);
+  }
+}
+
+/*******************effet de transition***********************/
+
+.transition {
+  animation: 3500ms earth-transition cubic-bezier(0.73, 0.18, 0.29, 0.96);
+}
+
+@keyframes earth-transition {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(20) translate(10%) translatey(10%);
+  }
+
+  60% {
+    transform: scale(20) translate(10%) translatey(10%);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes aparition-h1 {
+  0% {
+    transform: translatey(-200%);
+  }
+
+  100% {
+    transform: translatey(0%);
+  }
+}
+
+/* .search-input {
+    background-color: red;
+}
+
+header {
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+} */
