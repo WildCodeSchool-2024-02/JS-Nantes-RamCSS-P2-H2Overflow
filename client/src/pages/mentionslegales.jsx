@@ -2,7 +2,7 @@ import Footer from "../components/Footer";
 import MentionContent from "../components/MentionContent";
 import "../components/styles/mentionlegal.css";
 
-function MentionLegales() {
+function MentionsLegales() {
   return (
     <>
       <MentionContent />
@@ -11,4 +11,4 @@ function MentionLegales() {
   );
 }
 
-export default MentionLegales;
+export default MentionsLegales;
