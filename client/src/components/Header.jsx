@@ -21,19 +21,25 @@ function Header() {
     const height = window.innerHeight * 0.7;
     const ambientLight = new THREE.AmbientLight(0xffffff, 7);
     scene.current = new THREE.Scene();
+
     camera.current = new THREE.PerspectiveCamera(
       70,
       window.innerWidth / window.innerHeight,
       0.1,
       1000
     );
-    renderer.current = new THREE.WebGLRenderer({ canvas: canvas.current });
-    scene.current.background = new THREE.Color("rgba(255, 255, 255, 0)");
+
+    renderer.current = new THREE.WebGLRenderer({
+      canvas: canvas.current,
+      alpha: true,
+    });
     scene.current.add(ambientLight);
+    scene.background = null;
     renderer.current.setSize(width, height);
     camera.current.position.z = 1000;
-    camera.current.fov = 100;
+    camera.current.fov = 80;
     camera.current.updateProjectionMatrix();
+
     controls.current = new OrbitControls(
       camera.current,
       renderer.current.domElement
