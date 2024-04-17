@@ -1,7 +1,24 @@
-/* p {
-    height: 400px;
-} */
+.map {
+  display: flex;
+  background-image: url("../../assets/images/Carte_France_Temporaire.png");
+  border-radius: 40px;
+  margin-left: 40px;
+  height: 947px;
+  width: 998px;
+}
 
-body {
-  /* background-color: red; */
+/* Nouvelle image map , chatGPT par Lucas */
+
+/* Mettre le component, en css : 44 vh  */
+/* Mettre l'image en background en "fit le contenent" */
+
+.main {
+  display: flex;
+  height: 100vh;
+  /* background-color: brown; */
+  justify-content: center;
+}
+
+.img-pin {
+  height: 50px;
 }
