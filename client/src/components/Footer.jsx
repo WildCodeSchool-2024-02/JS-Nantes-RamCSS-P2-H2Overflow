@@ -3,12 +3,15 @@ import { NavLink } from "react-router-dom";
 function Footer() {
   return (
     <div>
-      <NavLink className="boutton-a-props" to="/">
-        A propos
+      {/* changer la direction !!!! */}
+      <NavLink className="boutton-a-props" to="/map">
+        {" "}
+        A propos{" "}
       </NavLink>
 
-      <NavLink className="boutton-carte" to="/PagePrincipale">
-        A propos
+      <NavLink className="boutton-carte" to="/map">
+        {" "}
+        A propos{" "}
       </NavLink>
     </div>
   );
