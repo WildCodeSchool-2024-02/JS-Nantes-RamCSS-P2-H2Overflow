@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 
-function TextPageLoader(data) {
-  const { data: dataContent } = data;
+function TextPageLoader() {
+  // console.log("%c⧭", "color: #00e600", data.data);  data
 
   return (
     <section className="section_loader">
@@ -13,7 +13,7 @@ function TextPageLoader(data) {
         leur importance et leur préservation.
         <br />
         <br />
-        Notre base de donnée est composée de {dataContent} tableaux de source
+        Notre base de donnée est composée de {1000} tableaux de sources
         diférentes.
       </p>
 

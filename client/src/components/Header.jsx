@@ -7,6 +7,7 @@ import "./styles/header.css";
 
 function Header() {
   const [isLoaded, setIsLoaded] = useState(false);
+  // const [isAnimating, setIsAnimating] = useState(false);
   const location = useLocation();
 
   const canvas = useRef();
@@ -63,6 +64,14 @@ function Header() {
     };
   }, []);
 
+  // const handleClick = () => {
+  //   setIsAnimating(true); // Déclenche l'animation
+  //   setTimeout(() => {
+  //     // Redirige vers la nouvelle page après un délai
+  //     window.location.href = "/";
+  //   }, 3000); // Délai d'une seconde
+  // };
+
   return (
     <header
       className={`header ${location.pathname === "/" ? "header-home" : ""}`}
@@ -70,7 +79,8 @@ function Header() {
       <h1 className={`header ${location.pathname === "/" ? "h1-home" : ""}`}>
         H²OVERFLOW
       </h1>
-      <NavLink to="/">
+      <NavLink>
+        {/* onClick={location.pathname === "/" ? handleClick : null} */}
         <canvas
           ref={canvas}
           id="3d-canvas"

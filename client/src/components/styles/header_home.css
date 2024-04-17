@@ -1,4 +1,4 @@
-header {
+/* header {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -61,4 +61,4 @@ h1 {
   100% {
     transform: translatey(0%);
   }
-}
+} */
