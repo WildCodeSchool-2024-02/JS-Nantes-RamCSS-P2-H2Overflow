@@ -20,6 +20,7 @@ const router = createBrowserRouter([
         path: "/map",
         element: <PagePrincipale />,
       },
+      0,
     ],
   },
 ]);
