@@ -19,13 +19,13 @@ function Header() {
     const loader = new GLTFLoader();
     const width = window.innerWidth * 0.7;
     const height = window.innerHeight * 0.7;
-    const ambientLight = new THREE.AmbientLight(0xffffff, 7);
+    const ambientLight = new THREE.AmbientLight(0xffffff, 10);
     scene.current = new THREE.Scene();
 
     camera.current = new THREE.PerspectiveCamera(
       70,
       window.innerWidth / window.innerHeight,
-      0.1,
+      0.01,
       1000
     );
 
@@ -33,17 +33,29 @@ function Header() {
       canvas: canvas.current,
       alpha: true,
     });
+
     scene.current.add(ambientLight);
     scene.background = null;
     renderer.current.setSize(width, height);
     camera.current.position.z = 1000;
+
     camera.current.fov = 80;
     camera.current.updateProjectionMatrix();
 
     controls.current = new OrbitControls(
+      // controls.mouseButtons,
       camera.current,
       renderer.current.domElement
     );
+
+    controls.current.mouseButtons = {
+      LEFT: false,
+      SCROLL: false,
+      MIDDLE: THREE.MOUSE.ROTATE,
+      RIGHT: THREE.MOUSE.ROTATE,
+    };
+
+    controls.current.enableZoom = false;
 
     loader.load("../src/assets/images/earth_3D.glb", (glb) => {
       const earth = glb.scene;
@@ -52,7 +64,13 @@ function Header() {
 
       function animate() {
         earth.rotation.y += 0.002;
-        renderer.current.render(scene.current, camera.current);
+        earth.rotation.x = 0.7;
+
+        renderer.current.render(
+          scene.current,
+          camera.current,
+          controls.mouseButtons
+        );
         requestAnimationFrame(animate);
       }
       animate();

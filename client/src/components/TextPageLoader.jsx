@@ -9,7 +9,7 @@ function TextPageLoader() {
     setIsAnimating(true);
     setTimeout(() => {
       setIsAnimating(false);
-      // window.location.href = "/map";
+      window.location.href = "/map";
       // Ajoutez ici la logique pour naviguer vers la page "map"
     }, 2000);
   };
