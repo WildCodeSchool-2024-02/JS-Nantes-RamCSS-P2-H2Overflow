@@ -4,8 +4,12 @@ import "./styles/PagePrincipale.css";
 function Map() {
   return (
     <div className="map">
-      <p> dsfdsfsdfs</p>
-      <Pin />
+      <div className="interieur-map">
+        <Pin />
+        <Pin />
+        <Pin />
+        <Pin />
+      </div>
     </div>
   );
 }
