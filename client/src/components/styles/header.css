@@ -1,7 +1,7 @@
 header {
   left: 0;
-  width: 25vw;
-  height: 200px;
+  width: 20vw;
+  height: 150px;
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-end;
@@ -14,9 +14,9 @@ header {
 
 canvas {
   position: relative;
-  left: -33px;
-  max-width: 400px;
-  max-height: 200px;
+  left: -25px;
+  max-width: 150px;
+  max-height: 75px;
 }
 
 .canvas-animate {
@@ -27,14 +27,12 @@ canvas {
   /* transform: scale(1); */
 }
 
-/**********************************/
-
 h1 {
   position: relative;
-  /* left: -70px; */
+  left: -70px;
   z-index: 1;
   font-family: "figtree";
-  font-size: 4rem;
+  font-size: 2rem;
   font-weight: 800;
   letter-spacing: 10px;
 }
