@@ -1,0 +1,64 @@
+/* header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.earth-3D {
+  width: 100%;
+  z-index: 0;
+  width: 70vw;
+  height: 70vh;
+}
+
+canvas {
+  z-index: 0;
+  position: relative;
+  left: -470px;
+  max-height: 70vh;
+  max-width: 70vw;
+  background-color: rgba(0, 0, 0, 0);
+  transform: scale(0);
+}
+
+.canvas-animate {
+  animation-delay: 2s;
+  animation: 3500ms earth-appearance cubic-bezier(0.73, 0.18, 0.29, 0.96);
+  transform: scale(1);
+}
+
+h1 {
+  position: relative;
+  z-index: 1;
+  font-family: "figtree";
+  font-size: 8rem;
+  font-weight: 800;
+  letter-spacing: 10px;
+  animation: 1000ms aparition-h1 ease-in-out;
+}
+
+@keyframes earth-appearance {
+  0% {
+    transform: scale(0) translateX(-200%);
+  }
+
+  30% {
+    transform: scale(0) translateX(+100%);
+  }
+
+  100% {
+    transform: scale(1) translateX(0%);
+  }
+}
+
+@keyframes aparition-h1 {
+  0% {
+    transform: translatey(-200%);
+  }
+
+  100% {
+    transform: translatey(0%);
+  }
+} */

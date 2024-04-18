@@ -1,13 +1,12 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useEffect, useState, useContext } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"; // Import correct
-import "./styles/header.css";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+import { AnimationContext } from "./AnimationContext";
 
 function Header() {
   const [isLoaded, setIsLoaded] = useState(false);
-  // const [isAnimating, setIsAnimating] = useState(false);
   const location = useLocation();
 
   const canvas = useRef();
@@ -64,13 +63,7 @@ function Header() {
     };
   }, []);
 
-  // const handleClick = () => {
-  //   setIsAnimating(true); // Déclenche l'animation
-  //   setTimeout(() => {
-  //     // Redirige vers la nouvelle page après un délai
-  //     window.location.href = "/";
-  //   }, 3000); // Délai d'une seconde
-  // };
+  const { isAnimating } = useContext(AnimationContext);
 
   return (
     <header
@@ -79,12 +72,18 @@ function Header() {
       <h1 className={`header ${location.pathname === "/" ? "h1-home" : ""}`}>
         H²OVERFLOW
       </h1>
+
       <NavLink>
-        {/* onClick={location.pathname === "/" ? handleClick : null} */}
         <canvas
           ref={canvas}
           id="3d-canvas"
-          className={`header ${location.pathname === "/" ? "canvas-animate-home canvas-home earth-3D-home" : ""} earth-3D ${isLoaded ? "canvas-animate" : ""}`}
+          className={`header ${
+            location.pathname === "/"
+              ? "canvas-animate-home canvas-home earth-3D-home"
+              : ""
+          } earth-3D ${isLoaded ? "canvas-animate" : ""} 
+          ${isAnimating ? "aparition-h1 " : ""}
+          `}
         />
       </NavLink>
     </header>
