@@ -1,8 +1,9 @@
 import { NavLink } from "react-router-dom";
+import "./styles/footer.css";
 
 function Footer() {
   return (
-    <div>
+    <div className="parent-nav">
       {/* changer la direction !!!! */}
       <NavLink className="boutton-a-props" to="/map">
         {" "}
@@ -11,7 +12,7 @@ function Footer() {
 
       <NavLink className="boutton-carte" to="/map">
         {" "}
-        A propos{" "}
+        Carte{" "}
       </NavLink>
     </div>
   );

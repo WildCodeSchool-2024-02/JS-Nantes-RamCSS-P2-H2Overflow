@@ -1,7 +1,19 @@
 .boutton-a-props {
+  display: flex;
+  position: relative;
   margin-bottom: 0;
+  text-decoration: none;
+  padding-left: 5rem;
+  font-size: 2rem;
 }
 
 .boutton-carte {
-  margin-bottom: 0;
+  display: flex;
+  text-decoration: none;
+  padding-left: 25px;
+  font-size: 2rem;
+}
+.parent-nav {
+  display: flex;
+  flex-direction: row;
 }
