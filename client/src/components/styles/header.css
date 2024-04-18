@@ -50,18 +50,18 @@ h1 {
 .earth-3D-home {
   width: 100%;
   z-index: 0;
-  width: 70vw;
-  height: 70vh;
-  left: 900px;
-  top: 500px;
+  width: 90vw;
+  height: 90vh;
+  left: 800px;
+  top: 400px;
 }
 
 .canvas-home {
   z-index: 0;
   position: relative;
   /* left: -470px; */
-  max-height: 70vh;
-  max-width: 70vw;
+  max-height: 90vh;
+  max-width: 90vw;
   transform: scale(0);
 }
 
@@ -76,7 +76,7 @@ h1 {
   position: relative;
   z-index: 1;
   font-family: "figtree";
-  font-size: 8rem;
+  font-size: 7rem;
   font-weight: 800;
   letter-spacing: 10px;
   animation: 1000ms aparition-h1 ease-in-out;

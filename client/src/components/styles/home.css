@@ -19,9 +19,9 @@ body {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 25%;
-  margin-left: 80rem;
-  top: 400px;
+  height: 10%;
+  margin-left: 60rem;
+  top: 300px;
 }
 
 .h2-loader {
@@ -31,7 +31,7 @@ body {
 
 .p-loader {
   margin-bottom: 2rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .boutton {
