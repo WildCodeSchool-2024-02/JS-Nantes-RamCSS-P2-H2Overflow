@@ -1,18 +1,17 @@
 import "./styles/Groundwatercard.css";
+import { station, chroniques } from "../data";
 
 function Groundwatercard() {
-  const data = [{ profondeur_nappe: 4 }, { profondeur_investigation: 45 }];
-
-  const profondeurNappe = data[0].profondeur_nappe;
-  const profondeurInvestigation = data[1].profondeur_investigation;
+  const profondeurNappe = chroniques[0].profondeur_nappe;
+  const profondeurInvestigation = station[0].profondeur_investigation;
 
   const percentage = Math.round(
     ((profondeurInvestigation - profondeurNappe) / profondeurInvestigation) *
       100
   );
 
-  let marginTopWater = ((100 - percentage) / 100) * 177 - 85;
-  marginTopWater = Math.min(Math.max(marginTopWater, -85), 92);
+  let marginTopWater = ((100 - percentage) / 100) * 175 - 85;
+  marginTopWater = Math.min(Math.max(marginTopWater, -85), 70);
 
   return (
     <div className="card-container">
