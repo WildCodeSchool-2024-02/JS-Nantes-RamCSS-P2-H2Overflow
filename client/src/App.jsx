@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import Spinner from "./components/Spinner";
 import Header from "./components/Header";
-import { AnimationProvider } from "./components/AnimationContext";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -20,17 +19,11 @@ function App() {
       });
   }, []);
 
-  // if (isLoading) {
-  //   return <Spinner />;
-  // }
-
   return isLoading ? (
     <Spinner />
   ) : (
     <>
-      <AnimationProvider>
-        <Header data={data} />
-      </AnimationProvider>
+      <Header data={data} />
       <Outlet />
     </>
   );

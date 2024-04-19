@@ -1,18 +1,18 @@
-import { useContext } from "react";
 import { NavLink } from "react-router-dom";
-import { AnimationContext } from "./AnimationContext";
 
 function TextPageLoader() {
-  const { setIsAnimating } = useContext(AnimationContext);
+  // * code en attente pour annimation
+  // const { setIsAnimating } = useContext(AnimationContext);
 
-  const handleClick = () => {
-    setIsAnimating(true);
-    setTimeout(() => {
-      setIsAnimating(false);
-      window.location.href = "/map";
-      // Ajoutez ici la logique pour naviguer vers la page "map"
-    }, 2000);
-  };
+  // const handleClick = () => {
+  //   setIsAnimating(true);
+  //   setTimeout(() => {
+  //     setIsAnimating(false);
+  //     window.location.href = "/map";
+  //     // Ajoutez ici la logique pour naviguer vers la page "map"
+  //   }, 2000);
+  // };
+  // * ///////////////////////////////////////// * //
 
   return (
     <section className="section_loader">
@@ -26,7 +26,7 @@ function TextPageLoader() {
         Notre base de données est composée de 1000 tableaux de sources
         différentes.
       </p>
-      <NavLink className="boutton" onClick={handleClick}>
+      <NavLink className="button" to="/map">
         Accéder aux données
       </NavLink>
     </section>
