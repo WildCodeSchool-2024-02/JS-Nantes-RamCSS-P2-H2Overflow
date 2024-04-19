@@ -1,9 +1,8 @@
-import { useRef, useEffect, useState, useContext } from "react";
+import { useRef, useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import { AnimationContext } from "./AnimationContext";
 
 function Header() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -81,8 +80,6 @@ function Header() {
     };
   }, []);
 
-  const { isAnimating } = useContext(AnimationContext);
-
   return (
     <header
       className={`header ${location.pathname === "/" ? "header-home" : ""}`}
@@ -100,7 +97,6 @@ function Header() {
               ? "canvas-animate-home canvas-home earth-3D-home"
               : ""
           } earth-3D ${isLoaded ? "canvas-animate" : ""} 
-          ${isAnimating ? "aparition-h1 " : ""}
           `}
         />
       </NavLink>

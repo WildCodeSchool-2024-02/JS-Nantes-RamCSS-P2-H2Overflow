@@ -23,8 +23,6 @@ const router = createBrowserRouter([
         path: "/legalmentions",
         element: <MentionsLegales />,
       },
-
-   
     ],
   },
 ]);

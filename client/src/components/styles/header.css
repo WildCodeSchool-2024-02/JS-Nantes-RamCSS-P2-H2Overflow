@@ -1,5 +1,5 @@
 header {
-  left: 0;
+  margin-left: -25px;
   width: 20vw;
   height: 150px;
   display: flex;
@@ -14,27 +14,25 @@ header {
 
 canvas {
   position: relative;
-  left: -25px;
-  max-width: 150px;
-  max-height: 75px;
+  left: 0px;
+  max-width: 250px;
+  max-height: 125px;
 }
 
 .canvas-animate {
   transition-timing-function: ease-in-out;
-
   animation-delay: 2s;
   animation: 2000ms earth-transition cubic-bezier(0.73, 0.18, 0.29, 0.96);
-  /* transform: scale(1); */
 }
 
 h1 {
   position: relative;
-  left: -70px;
+  left: -60px;
   z-index: 1;
-  font-family: "figtree";
-  font-size: 2rem;
+  font-family: "figtree", sans-serif;
+  font-size: 3rem;
   font-weight: 800;
-  letter-spacing: 10px;
+  letter-spacing: 5px;
 }
 
 /****************************header-home*****************************************/
@@ -61,6 +59,7 @@ h1 {
   max-height: 90vh;
   max-width: 90vw;
   transform: scale(0);
+  overflow-x: hidden;
 }
 
 .canvas-animate-home {
@@ -73,11 +72,13 @@ h1 {
 .h1-home {
   position: relative;
   z-index: 1;
-  font-family: "figtree";
-  font-size: 7rem;
+  font-family: "figtree", sans-serif;
+  font-size: 6rem;
   font-weight: 800;
   letter-spacing: 10px;
   animation: 1000ms aparition-h1 ease-in-out;
+  top: -50px;
+  left: 6rem;
 }
 
 @keyframes earth-appearance {
@@ -148,3 +149,9 @@ h1 {
     transform: translatey(0%);
   }
 }
+
+/* bloquer le scroll */
+
+/* .header {
+  overflow-x: clip;
+} */
