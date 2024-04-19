@@ -1,10 +1,16 @@
-import { useLoaderData } from "react-router-dom";
+import { AnimationProvider } from "../components/AnimationContext";
 import TextPageLoader from "../components/TextPageLoader";
+
 import "../components/styles/home.css";
 
 function Home() {
-  const data = useLoaderData();
+  // Utilisez useContext pour accéder au contexte ButtonClickContext
 
-  return <TextPageLoader data={data.data.length} />;
+  return (
+    <AnimationProvider>
+      <TextPageLoader data={1000} />
+    </AnimationProvider>
+  );
 }
+
 export default Home;

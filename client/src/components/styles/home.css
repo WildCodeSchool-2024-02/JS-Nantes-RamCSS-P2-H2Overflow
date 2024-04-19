@@ -19,9 +19,9 @@ body {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 25%;
-  margin-left: 80rem;
-  top: 400px;
+  height: 10%;
+  margin-left: 60rem;
+  top: 300px;
 }
 
 .h2-loader {
@@ -31,17 +31,31 @@ body {
 
 .p-loader {
   margin-bottom: 2rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .boutton {
   text-decoration: none;
   font-size: 3rem;
-  /* border: 1px solid black; */
   background-color: #bbe4e9;
   padding: 15px;
   border-radius: 15px;
   margin-bottom: 150px;
   -webkit-box-shadow: 0px 11px 21px 4px rgba(0, 0, 0, 0.58);
   box-shadow: 0px 11px 21px 4px rgba(0, 0, 0, 0.58);
+}
+
+.svg-spinner {
+  background: rgb(187, 228, 233);
+  background: radial-gradient(
+    circle,
+    rgba(187, 228, 233, 1) 0%,
+    rgba(83, 168, 182, 1) 70%
+  );
+  background-size: 150vw;
+  background-position: right;
+  width: 100vw;
+  height: 100vh;
+  z-index: 11000;
+  /* top: 0; */
 }
