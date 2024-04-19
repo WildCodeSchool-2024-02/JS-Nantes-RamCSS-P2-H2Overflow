@@ -1,0 +1,66 @@
+/*  background site */
+
+body {
+  background: rgb(187, 228, 233);
+  background: radial-gradient(
+    circle,
+    rgba(187, 228, 233, 1) 0%,
+    rgba(83, 168, 182, 1) 70%
+  );
+  background-size: 150vw;
+  background-position: right;
+}
+
+/* Bouton et texte de la page de chargement /LUCAS/ */
+
+.section_loader {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 10%;
+  margin-left: 55rem;
+  top: 200px;
+  font-family: "figtree", sans-serif;
+}
+
+.h2-loader {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.p-loader {
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+  text-align: center;
+  font-weight: 800;
+}
+
+.button {
+  text-decoration: none;
+  font-size: 2rem;
+  background-color: #bbe4e9;
+  padding: 15px;
+  border-radius: 15px;
+  margin-bottom: 150px;
+  /* -webkit-box-shadow: 1px 3px 8px 1px rgba(88, 88, 88, 0.61); */
+  /* box-shadow: 1px 3px 8px 1px rgba(88, 88, 88, 0.61); */
+  color: black;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.svg-spinner {
+  background: rgb(187, 228, 233);
+  background: radial-gradient(
+    circle,
+    rgba(187, 228, 233, 1) 0%,
+    rgba(83, 168, 182, 1) 70%
+  );
+  background-size: 150vw;
+  background-position: right;
+  width: 100vw;
+  height: 100vh;
+  z-index: 11000;
+  /* top: 0; */
+}

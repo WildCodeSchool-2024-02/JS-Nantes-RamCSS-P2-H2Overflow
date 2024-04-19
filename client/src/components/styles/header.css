@@ -1,7 +1,7 @@
 header {
-  left: 0;
-  width: 25vw;
-  height: 200px;
+  margin-left: -25px;
+  width: 20vw;
+  height: 150px;
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-end;
@@ -14,35 +14,30 @@ header {
 
 canvas {
   position: relative;
-  left: -33px;
-  max-width: 400px;
-  max-height: 200px;
-  background-color: rgba(0, 0, 0, 0);
+  left: 0px;
+  max-width: 250px;
+  max-height: 125px;
 }
 
-/**********************************/
 .canvas-animate {
+  transition-timing-function: ease-in-out;
   animation-delay: 2s;
   animation: 2000ms earth-transition cubic-bezier(0.73, 0.18, 0.29, 0.96);
-  /* transform: scale(1); */
 }
-
-/**********************************/
 
 h1 {
   position: relative;
-  /* left: -70px; */
+  left: -60px;
   z-index: 1;
-  font-family: "figtree";
-  font-size: 4rem;
+  font-family: "figtree", sans-serif;
+  font-size: 3rem;
   font-weight: 800;
-  letter-spacing: 10px;
+  letter-spacing: 5px;
 }
 
 /****************************header-home*****************************************/
 .header-home {
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
   padding-top: 50px;
@@ -51,36 +46,39 @@ h1 {
 .earth-3D-home {
   width: 100%;
   z-index: 0;
-  width: 70vw;
-  height: 70vh;
-  left: 900px;
-  top: 300px;
+  width: 90vw;
+  height: 90vh;
+  left: 800px;
+  top: 400px;
 }
 
 .canvas-home {
   z-index: 0;
   position: relative;
   /* left: -470px; */
-  max-height: 70vh;
-  max-width: 70vw;
-  background-color: rgba(0, 0, 0, 0);
+  max-height: 90vh;
+  max-width: 90vw;
   transform: scale(0);
+  overflow-x: hidden;
 }
 
 .canvas-animate-home {
+  transition-timing-function: ease-in-out;
   animation-delay: 2s;
   animation: 3500ms earth-appearance cubic-bezier(0.73, 0.18, 0.29, 0.96);
-  transform: scale(1);
+  transform: scale(1) rotate(-33deg);
 }
 
 .h1-home {
   position: relative;
   z-index: 1;
-  font-family: "figtree";
-  font-size: 8rem;
+  font-family: "figtree", sans-serif;
+  font-size: 6rem;
   font-weight: 800;
   letter-spacing: 10px;
   animation: 1000ms aparition-h1 ease-in-out;
+  top: -50px;
+  left: 6rem;
 }
 
 @keyframes earth-appearance {
@@ -90,10 +88,12 @@ h1 {
 
   30% {
     transform: scale(0) translateX(+100%);
+    z-index: 1000;
   }
 
   100% {
-    transform: scale(1) translateX(0%);
+    transform: scale(1) translateX(0%) rotate(-33deg);
+    z-index: -1;
   }
 }
 
@@ -109,25 +109,34 @@ h1 {
 
 /*******************effet de transition***********************/
 
+.transition-out {
+  animation: 3500ms earth-transition-out cubic-bezier(0.73, 0.18, 0.29, 0.96);
+}
+
+@keyframes earth-transition-out {
+  0% {
+    transform: translate(-200%);
+    z-index: 1000;
+  }
+
+  100% {
+    transform: translate(+200%);
+  }
+}
+
 .transition {
   animation: 3500ms earth-transition cubic-bezier(0.73, 0.18, 0.29, 0.96);
 }
 
 @keyframes earth-transition {
   0% {
-    transform: scale(0);
-  }
-
-  50% {
-    transform: scale(20) translate(10%) translatey(10%);
-  }
-
-  60% {
-    transform: scale(20) translate(10%) translatey(10%);
+    transform: translate(-200%);
+    z-index: 1000;
   }
 
   100% {
     transform: scale(1);
+    z-index: -1;
   }
 }
 
@@ -141,12 +150,8 @@ h1 {
   }
 }
 
-/* .search-input {
-    background-color: red;
-}
+/* bloquer le scroll */
 
-header {
-    width: 100vw;
-    height: 90vh;
-    display: flex;
+/* .header {
+  overflow-x: clip;
 } */

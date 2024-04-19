@@ -4,21 +4,3 @@
   margin: 0;
   padding: 0;
 }
-
-/* Bouton et texte de la page de chargement /LUCAS/ */
-.PLoader {
-  position: sticky;
-  display: flex;
-  margin-left: 65rem;
-  font-size: 1rem;
-  white-space: nowrap;
-}
-
-.Boutton {
-  display: flex;
-  justify-content: center;
-  text-decoration: none;
-  font-size: 1rem;
-  border-radius: 15px;
-  margin-bottom: 150px;
-}

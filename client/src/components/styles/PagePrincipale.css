@@ -1,7 +1,30 @@
-/* p {
-    height: 400px;
-} */
+.map {
+  display: flex;
+  background-image: url("../../assets/images/Carte_France_Temporaire.png");
+  border-radius: 40px;
+  margin-left: 100px;
+  height: 95vh;
+  width: 60vw;
+  margin-top: -180px;
+  background-size: cover;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
 
-/* body {
-  background-color: red;
-} */
+.main {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+
+.img-pin {
+  height: 50px;
+}
+
+.interieur-map {
+  display: flex;
+  flex-wrap: wrap;
+
+  /* background-color: black; */
+}

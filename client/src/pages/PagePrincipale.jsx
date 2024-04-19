@@ -6,11 +6,11 @@ import "../components/styles/header.css";
 
 function PagePrincipale() {
   return (
-    <>
-      <Map />
+    <main className="main">
       <Groundwatercard />
       <Chartcard />
-    </>
+      <Map />
+    </main>
   );
 }
 
