@@ -6,11 +6,11 @@ import Footer from "../components/Footer";
 
 function PagePrincipale() {
   return (
-    <>
-      <Map />
+    <main className="main">
       <Groundwatercard />
-      <Footer />
     </>
+      <Map />
+    </main>
   );
 }
 

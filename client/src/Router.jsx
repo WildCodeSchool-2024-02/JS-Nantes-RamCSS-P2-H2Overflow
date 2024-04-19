@@ -21,10 +21,13 @@ const router = createBrowserRouter([
         path: "/map",
         element: <PagePrincipale />,
       },
+
       {
         path: "/legalmentions",
         element: <MentionsLegales />,
       },
+
+   
     ],
   },
 ]);
