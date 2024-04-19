@@ -1,0 +1,25 @@
+/* La card dans mention légales  */
+.card {
+  width: 113rem;
+  height: 42rem;
+  margin: auto;
+  margin-top: 5rem;
+  background-color: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(2px);
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px gray;
+  color: black;
+  font-size: 25px;
+  text-align: center;
+  text-shadow: 0px 0px px gray;
+  padding-top: 2rem;
+}
+/* le titre de mention légales */
+.mentionlegaltitre {
+  color: black;
+}
+/* Paragraphe dans mention légales */
+.mentionlegalp {
+  text-align: center;
+}
+/* en dessous sa FOOTER*/
