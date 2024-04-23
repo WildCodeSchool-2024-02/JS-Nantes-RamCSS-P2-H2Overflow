@@ -16,7 +16,7 @@ function MentionContent() {
         numéro [numéro RCS], dont le siège social est situé au [adresse ].
       </p>
 
-      <p>
+      <p className="mentionlegalp3">
         {" "}
         <br /> Directeur de la publication : [Nom du directeur de la
         publication] Contact : [Adresse email de contact]
@@ -24,7 +24,7 @@ function MentionContent() {
         le siège social est situé au [adresse complète].
       </p>
 
-      <p>
+      <p className="mentionlegalp4">
         {" "}
         <br />
         Propriété Intellectuelle : Tous les éléments présents sur ce site, y
@@ -35,7 +35,7 @@ function MentionContent() {
         Intellectuelle.
       </p>
 
-      <p>
+      <p className="mentionlegalp5">
         {" "}
         <br />
         Toute reproduction, distribution, modification ou utilisation de ces
@@ -43,7 +43,7 @@ function MentionContent() {
         strictement interdite.
       </p>
 
-      <p>
+      <p className="mentionlegalp6">
         {" "}
         <br />
         Collecte de données personnelles : [Nom de la société] collecte et
@@ -52,7 +52,7 @@ function MentionContent() {
         politique de confidentialité].
       </p>
 
-      <p>
+      <p className="mentionlegalp7">
         {" "}
         <br /> Cookies : Ce site utilise des cookies. Pour plus d'informations
         sur l'utilisation des cookies et sur la manière de les gérer, veuillez
