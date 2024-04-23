@@ -1,6 +1,7 @@
 /*  background site */
 
 body {
+  overflow: hidden;
   background: rgb(187, 228, 233);
   background: radial-gradient(
     circle,
@@ -14,14 +15,9 @@ body {
 /* Bouton et texte de la page de chargement /LUCAS/ */
 
 .section_loader {
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  height: 10%;
   margin-left: 55rem;
-  top: 200px;
+  text-align: center;
+
   font-family: "figtree", sans-serif;
 }
 

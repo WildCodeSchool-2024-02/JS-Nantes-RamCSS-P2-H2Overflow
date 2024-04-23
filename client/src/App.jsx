@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import Spinner from "./components/Spinner";
 import Header from "./components/Header";
+// import Footer from "./components/Footer";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);

@@ -1,25 +1,26 @@
 /* La card dans mention légales  */
+
 .card {
-  width: 113rem;
-  height: 42rem;
+  width: 115rem;
+  height: 43rem;
   margin: auto;
-  margin-top: 5rem;
+  margin-top: 1rem;
   background-color: rgba(255, 255, 255, 0.45);
   backdrop-filter: blur(2px);
   border-radius: 20px;
   box-shadow: 0px 0px 5px gray;
   color: black;
-  font-size: 25px;
-  text-align: center;
+  font-size: 21px;
+  text-align: left;
   text-shadow: 0px 0px px gray;
-  padding-top: 2rem;
 }
 /* le titre de mention légales */
 .mentionlegaltitre {
   color: black;
+  text-align: center;
 }
 /* Paragraphe dans mention légales */
 .mentionlegalp {
-  text-align: center;
+  margin-left: 15px;
 }
 /* en dessous sa FOOTER*/

@@ -1,5 +1,6 @@
 .map {
   display: flex;
+  overflow: hidden;
   background-image: url("../../assets/images/Carte_France_Temporaire.png");
   border-radius: 40px;
   margin-left: 100px;
