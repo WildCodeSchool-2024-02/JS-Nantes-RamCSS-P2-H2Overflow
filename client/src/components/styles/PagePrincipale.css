@@ -1,11 +1,13 @@
 .map {
+  position: relative;
+
   display: flex;
   background-image: url("../../assets/images/Carte_France_Temporaire.png");
-  border-radius: 40px;
-  margin-left: 100px;
+  border-radius: 20px;
   height: 95vh;
   width: 60vw;
-  margin-top: -180px;
+  margin-top: -140px;
+  margin-right: -120px;
   background-size: cover;
   flex-wrap: wrap;
   justify-content: center;
@@ -15,7 +17,7 @@
 .main {
   display: flex;
   height: 100vh;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .img-pin {
@@ -25,6 +27,10 @@
 .interieur-map {
   display: flex;
   flex-wrap: wrap;
+}
 
-  /* background-color: black; */
+.groundwater-chartcard {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
 }

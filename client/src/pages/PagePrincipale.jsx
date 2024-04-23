@@ -7,8 +7,10 @@ import "../components/styles/header.css";
 function PagePrincipale() {
   return (
     <main className="main">
-      <Groundwatercard />
-      <Chartcard />
+      <div className="groundwater-chartcard">
+        <Groundwatercard />
+        <Chartcard />
+      </div>
       <Map />
     </main>
   );
