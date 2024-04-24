@@ -9,7 +9,9 @@ function App() {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    fetch("https://hubeau.eaufrance.fr/api/v1/niveaux_nappes/stations")
+    fetch(
+      "https://hubeau.eaufrance.fr/api/v1/niveaux_nappes/stations?size=20000"
+    )
       .then((response) => response.json())
       .then((resData) => {
         setData(resData);
@@ -28,13 +30,20 @@ function App() {
     return <Spinner />;
   }
 
-  const yearsArray = [];
-  for (let i = 0; i < data.data.length; i += 1) {
-    const datesArray = data.data[i].profondeur_investigation;
-    const yearsString = datesArray;
-    yearsArray.push(yearsString);
-  }
-  // const years = [...new Set(yearsArray)];
+  // *en attente de calcule et de logique
+
+  // let profondeurNappe = 0;
+  // const profondeurNappeArray = [];
+  // for (let i = 0; i < data.data.length; i += 1) {
+  //   console.log("%c⧭", "color: #99adcc", data.data[i].bss_id)
+  //   if (data.data[i].profondeur_investigation) {
+  //     const nappeArray = data.data[i].profondeur_investigation;
+
+  //     profondeurNappeArray.push(nappeArray);
+  //   }
+  // }
+  // console.log("%c⧭", "color: #99adcc", profondeurNappe);
+  // // const years = [...new Set(yearsArray)];
 
   return (
     <>
