@@ -38,6 +38,7 @@
 
 .percentage-text {
   position: absolute;
+  margin-top: 0;
   width: 109px;
   font-size: 40px;
   font-family: "Cabin";
