@@ -1,36 +1,19 @@
-.map {
-  position: relative;
-
-  display: flex;
-  background-image: url("../../assets/images/Carte_France_Temporaire.png");
-  border-radius: 20px;
-  height: 95vh;
-  width: 60vw;
-  margin-top: -140px;
-  margin-right: -120px;
-  background-size: cover;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
-}
-
 .main {
   display: flex;
-  height: 100vh;
   justify-content: space-around;
-}
-
-.img-pin {
-  height: 50px;
-}
-
-.interieur-map {
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .groundwater-chartcard {
   display: flex;
   flex-direction: column;
   gap: 50px;
+}
+
+.leaflet-container {
+  width: 61vw;
+  height: 95vh;
+  border-radius: 25px;
+  margin-top: -138px;
+  margin-right: -21px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
