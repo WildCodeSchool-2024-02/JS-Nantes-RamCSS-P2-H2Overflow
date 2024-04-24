@@ -43,6 +43,12 @@ li {
   font-family: "figtree", sans-serif;
 }
 
+.height-scrollbar {
+  height: 600px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
 .text-container {
   width: 1600px;
   height: 600px;
@@ -50,8 +56,6 @@ li {
   border-radius: 20px;
   backdrop-filter: blur(8px);
   overflow: hidden;
-  overflow-y: auto;
-  overflow-x: hidden;
 }
 
 h3 {
