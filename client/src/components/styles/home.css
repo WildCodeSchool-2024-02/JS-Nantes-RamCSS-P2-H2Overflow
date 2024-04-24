@@ -14,14 +14,10 @@ body {
 /* Bouton et texte de la page de chargement /LUCAS/ */
 
 .section_loader {
-  position: fixed;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
-  height: 10%;
-  margin-left: 55rem;
-  top: 200px;
+  margin-right: -810px;
   font-family: "figtree", sans-serif;
 }
 
@@ -44,8 +40,6 @@ body {
   padding: 15px;
   border-radius: 15px;
   margin-bottom: 150px;
-  /* -webkit-box-shadow: 1px 3px 8px 1px rgba(88, 88, 88, 0.61); */
-  /* box-shadow: 1px 3px 8px 1px rgba(88, 88, 88, 0.61); */
   color: black;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
@@ -62,5 +56,4 @@ body {
   width: 100vw;
   height: 100vh;
   z-index: 11000;
-  /* top: 0; */
 }
