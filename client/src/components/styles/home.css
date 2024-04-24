@@ -1,14 +1,17 @@
 /*  background site */
 
+#root {
+  width: 98vw;
+  height: 98vh;
+  overflow: hidden;
+}
+
 body {
-  background: rgb(187, 228, 233);
   background: radial-gradient(
-    circle,
-    rgba(187, 228, 233, 1) 0%,
-    rgba(83, 168, 182, 1) 70%
+    60.04% 47.72% at 28.65% 57.32%,
+    #bbe4e9 60.5%,
+    #79c2d0 100%
   );
-  background-size: 150vw;
-  background-position: right;
 }
 
 /* Bouton et texte de la page de chargement /LUCAS/ */
@@ -17,7 +20,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-right: -810px;
+  margin-left: 813px;
   font-family: "figtree", sans-serif;
 }
 
