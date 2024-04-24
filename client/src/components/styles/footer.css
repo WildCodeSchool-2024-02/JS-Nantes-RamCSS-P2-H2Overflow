@@ -5,6 +5,8 @@
   text-decoration: none;
   padding-left: 5rem;
   font-size: 2rem;
+  color: black;
+  margin-top: 3rem;
 }
 
 .boutton-carte {
@@ -12,6 +14,8 @@
   text-decoration: none;
   padding-left: 25px;
   font-size: 2rem;
+  color: black;
+  margin-top: 3rem;
 }
 .parent-nav {
   display: flex;
