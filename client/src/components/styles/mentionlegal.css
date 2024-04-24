@@ -21,6 +21,11 @@
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(83, 168, 182);
 }
+.mentionlegalp {
+  margin-left: 1rem;
+  margin-top: -0px;
+}
+
 .card {
   margin-top: 2rem;
   width: 114rem;
@@ -38,10 +43,6 @@
   flex-wrap: wrap;
 }
 
-.mentionlegalp {
-  margin-left: 1rem;
-  padding-top: 3rem;
-}
 .mentionlegaltitre {
   position: absolute;
   margin-top: -30px;

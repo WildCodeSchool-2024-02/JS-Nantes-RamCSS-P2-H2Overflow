@@ -1,114 +1,39 @@
 function MentionContent() {
+  const monTab = [
+    {
+      paragraph:
+        "Éditeur du site : Nom de l'entreprise ou de l'individu Adresse Téléphone Email de contact",
+    },
+    { paragraph: "Directeur de publication : Nom du directeur de publication" },
+    {
+      paragraph:
+        "Hébergement : Nom de la société d'hébergement adresse de l'hébergeur Téléphone de l'hébergeur Email de contact de l'hébergeur",
+    },
+    {
+      paragraph:
+        "Propriété intellectuelle :Le contenu de ce site web, y compris les textes, images, graphiques, logos, et tout autre élément, est la propriété de [Nom de l'entreprise] ou de ses partenaires et est protégé par les lois sur la propriété intellectuelle. Toute reproduction, distribution, modification ou utilisation de ce contenu sans autorisation écrite préalable est strictement interdite.",
+    },
+    {
+      paragraph:
+        "Protection des données personnelles :  Les informations collectées sur ce site sont destinées à  [Nom de l'entreprise ] et peuvent être utilisées dans le cadre de la gestion de la relation client. Conformément à la loi informatique et libertés du [date], vous disposez d'un droit d'accès, de rectification et de suppression des données vous concernant. Pour exercer ce droit, veuillez nous contacter à l'adresse [adresse email].",
+    },
+    {
+      paragraph:
+        "Cookies :Ce site utilise des cookies pour améliorer l'expérience utilisateur. En utilisant ce site, vous consentez à l'utilisation de cookies conformément à notre politique en matière de cookies.",
+    },
+    {
+      paragraph:
+        "Liens vers des sites tiers :Ce site peut contenir des liens vers des sites web de tiers. [Nom de l'entreprise] n'est pas responsable du contenu ou des pratiques de confidentialité de ces sites.",
+    },
+    {
+      paragraph:
+        "Modification des mentions légales :[Nom de l'entreprise] se réserve le droit de modifier les présentes mentions légales à tout moment. Nous vous invitons donc à consulter cette page régulièrement.",
+    },
+  ];
   return (
     <>
       <h1 className="mentionlegaltitre"> Mentions légales </h1>
-      <figure className="card">
-        <p className="mentionlegalp">
-          {" "}
-          Ce site web est édité par [Nom de la société], une société [forme
-          juridique] au capital de [montant du capital social],
-        </p>
-
-        <p className="mentionlegalp2">
-          {" "}
-          immatriculée au Registre du Commerce et des Sociétés de [ville] sous
-          le numéro [numéro RCS], dont le siège social est situé au [adresse ].
-        </p>
-
-        <p>
-          {" "}
-          Directeur de la publication : [Nom du directeur de la publication]
-          Contact : [Adresse email de contact] Hébergement : Ce site est hébergé
-          par [Nom de l'hébergeur], dont le siège social est situé au [adresse
-          complète].
-        </p>
-
-        <p>
-          {" "}
-          Propriété Intellectuelle : Tous les éléments présents sur ce site, y
-          compris mais non limité aux textes, images, logos, graphiques, vidéos,
-          et autres contenus, sont la propriété intellectuelle de [Nom de la
-          société] ou de ses concédants de licence, et sont protégés par les
-          lois françaises et internationales sur le droit d'auteur et la
-          propriété Intellectuelle.
-        </p>
-
-        <p>
-          {" "}
-          Toute reproduction, distribution, modification ou utilisation de ces
-          éléments sans l'autorisation préalable écrite de [Nom de la société]
-          est strictement interdite.
-        </p>
-
-        <p>
-          {" "}
-          Collecte de données personnelles : [Nom de la société] collecte et
-          traite les données personnelles conformément à sa politique de
-          confidentialité, disponible à l'adresse suivante : [lien vers la
-          politique de confidentialité].
-        </p>
-
-        <p>
-          {" "}
-          Cookies : Ce site utilise des cookies. Pour plus d'informations sur
-          l'utilisation des cookies et sur la manière de les gérer, veuillez
-          consulter notre politique en matière de cookies disponible à l'adresse
-          suivante : [lien vers la politique en matière de cookies].
-        </p>
-
-        <p className="mentionlegalp">
-          {" "}
-          Ce site web est édité par [Nom de la société], une société [forme
-          juridique] au capital de [montant du capital social],
-        </p>
-
-        <p className="mentionlegalp2">
-          {" "}
-          immatriculée au Registre du Commerce et des Sociétés de [ville] sous
-          le numéro [numéro RCS], dont le siège social est situé au [adresse ].
-        </p>
-
-        <p>
-          {" "}
-          Directeur de la publication : [Nom du directeur de la publication]
-          Contact : [Adresse email de contact] Hébergement : Ce site est hébergé
-          par [Nom de l'hébergeur], dont le siège social est situé au [adresse
-          complète].
-        </p>
-
-        <p>
-          {" "}
-          Propriété Intellectuelle : Tous les éléments présents sur ce site, y
-          compris mais non limité aux textes, images, logos, graphiques, vidéos,
-          et autres contenus, sont la propriété intellectuelle de [Nom de la
-          société] ou de ses concédants de licence, et sont protégés par les
-          lois françaises et internationales sur le droit d'auteur et la
-          propriété Intellectuelle.
-        </p>
-
-        <p>
-          {" "}
-          Toute reproduction, distribution, modification ou utilisation de ces
-          éléments sans l'autorisation préalable écrite de [Nom de la société]
-          est strictement interdite.
-        </p>
-
-        <p>
-          {" "}
-          Collecte de données personnelles : [Nom de la société] collecte et
-          traite les données personnelles conformément à sa politique de
-          confidentialité, disponible à l'adresse suivante : [lien vers la
-          politique de confidentialité].
-        </p>
-
-        <p>
-          {" "}
-          Cookies : Ce site utilise des cookies. Pour plus d'informations sur
-          l'utilisation des cookies et sur la manière de les gérer, veuillez
-          consulter notre politique en matière de cookies disponible à l'adresse
-          suivante : [lien vers la politique en matière de cookies].
-        </p>
-      </figure>
+      <figure className="card">{monTab}</figure>
     </>
   );
 }
