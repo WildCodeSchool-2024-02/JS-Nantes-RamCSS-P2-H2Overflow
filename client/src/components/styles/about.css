@@ -1,7 +1,73 @@
-.about-container {
-  width: 1356px;
-  height: 713px;
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background: rgb(121, 194, 208);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(83, 168, 182);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.about-global-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -50px;
+}
+
+h2,
+h3 {
+  font-size: 32px;
+  font-family: "Cabin", sans-serif;
+}
+
+p {
+  font-family: "figtree", sans-serif;
+}
+
+.text-container {
+  width: 1600px;
+  height: 600px;
   background-color: rgba(255, 255, 255, 0.45);
   border-radius: 20px;
   backdrop-filter: blur(8px);
+  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+h3 {
+  text-align: center;
+}
+
+.text-element {
+  padding: 0 30px;
+  font-size: 20px;
+}
+
+.calcul {
+  display: flex;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
+.img-calcul {
+  width: 650px;
 }
