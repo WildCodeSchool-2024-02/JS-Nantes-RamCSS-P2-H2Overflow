@@ -50,7 +50,7 @@ function About() {
                 souterraines
               </li>
             </ul>
-            <h3>Comment H2Overflow trouve ses chiffres?</h3>
+            <h3>Comment H2Overflow calcul ces données?</h3>
             <p>
               Pour afficher nos différents chiffres, nous avons utilisés
               différents calculs :
