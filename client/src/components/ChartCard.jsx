@@ -9,7 +9,6 @@ import {
   Legend,
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
-import { station, chroniques } from "../data";
 
 ChartJS.register(
   CategoryScale,
@@ -20,14 +19,12 @@ ChartJS.register(
   Legend
 );
 
-function Chartcard() {
-  JSON.stringify();
-
+function Chartcard({ dataChronique, dataStation }) {
   // creation of a table listing the unique years of reporting
 
   const yearsArray = [];
-  for (let i = 0; i < chroniques.length; i += 1) {
-    const datesArray = chroniques[i].date_mesure;
+  for (let i = 0; i < dataChronique.length; i += 1) {
+    const datesArray = dataChronique[i].date_mesure;
     const yearsString = datesArray.substring(0, 4);
     yearsArray.push(yearsString);
   }
@@ -39,7 +36,7 @@ function Chartcard() {
   const dataByYear = {};
 
   years.forEach((year) => {
-    const dataForYear = chroniques.filter((el) =>
+    const dataForYear = dataChronique.filter((el) =>
       el.date_mesure.includes(year)
     );
     if (dataForYear.length > 0) {
@@ -71,7 +68,7 @@ function Chartcard() {
   years.forEach((year) => {
     // calculating the average
 
-    const profondeurInvertigationYear = station[0].profondeur_investigation;
+    const profondeurInvertigationYear = dataStation[0].profondeur_investigation;
 
     const nappeValuesForAverage = nappeValuesByYear[year];
 
@@ -92,6 +89,15 @@ function Chartcard() {
 
   const options = {
     responsive: true,
+    scales: {
+      y: {
+        min: 0,
+        max: 100,
+        ticks: {
+          stepSize: 10,
+        },
+      },
+    },
     plugins: {
       labels: {
         font: {
