@@ -29,11 +29,25 @@ function MentionContent() {
       paragraph:
         "Modification des mentions légales :[Nom de l'entreprise] se réserve le droit de modifier les présentes mentions légales à tout moment. Nous vous invitons donc à consulter cette page régulièrement.",
     },
+    {
+      paragraph:
+        "Propriété intellectuelle :Le contenu de ce site web, y compris les textes, images, graphiques, logos, et tout autre élément, est la propriété de [Nom de l'entreprise] ou de ses partenaires et est protégé par les lois sur la propriété intellectuelle. Toute reproduction, distribution, modification ou utilisation de ce contenu sans autorisation écrite préalable est strictement interdite.",
+    },
+    {
+      paragraph:
+        "Protection des données personnelles :  Les informations collectées sur ce site sont destinées à  [Nom de l'entreprise ] et peuvent être utilisées dans le cadre de la gestion de la relation client. Conformément à la loi informatique et libertés du [date], vous disposez d'un droit d'accès, de rectification et de suppression des données vous concernant. Pour exercer ce droit, veuillez nous contacter à l'adresse [adresse email].",
+    },
+    {
+      paragraph:
+        "Propriété intellectuelle :Le contenu de ce site web, y compris les textes, images, graphiques, logos, et tout autre élément, est la propriété de [Nom de l'entreprise] ou de ses partenaires et est protégé par les lois sur la propriété intellectuelle. Toute reproduction, distribution, modification ou utilisation de ce contenu sans autorisation écrite préalable est strictement interdite.",
+    },
   ];
   return (
     <>
       <h1 className="mentionlegaltitre"> Mentions légales </h1>
-      <figure className="card">{monTab}</figure>
+      <figure className="card">
+        <p className="text">{monTab.map((el) => el.paragraph)}</p>
+      </figure>
     </>
   );
 }
