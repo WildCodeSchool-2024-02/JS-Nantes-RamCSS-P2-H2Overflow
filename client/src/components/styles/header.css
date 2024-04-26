@@ -33,6 +33,7 @@ canvas {
   font-size: 3rem;
   font-weight: 800;
   letter-spacing: 5px;
+  animation: 1000ms aparition-h1 ease-in-out;
 }
 
 /****************************header-home*****************************************/
