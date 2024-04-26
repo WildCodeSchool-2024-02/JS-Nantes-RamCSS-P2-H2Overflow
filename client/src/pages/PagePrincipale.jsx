@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Map from "../components/Map";
+import Footer from "../components/Footer";
 import Groundwatercard from "../components/Groundwatercard";
 import Chartcard from "../components/ChartCard";
 import "../components/styles/PagePrincipale.css";
@@ -10,18 +11,21 @@ function PagePrincipale() {
   const [isLoading, setIsLoading] = useState(true);
   const [stationsData, setStationsData] = useState(null);
   const [chroniquesData, setChroniquesData] = useState(null);
-  const codeBss = "01142X0137/RIP100";
+  const codeBss = "00692X0062/P";
 
   useEffect(() => {
     setIsLoading(true);
-    Promise.all([
-      fetch(
-        `https://hubeau.eaufrance.fr/api/v1/niveaux_nappes/stations?code_bss=${codeBss}&format=json&size=20`
-      ),
-      fetch(
-        `https://hubeau.eaufrance.fr/api/v1/niveaux_nappes/chroniques?code_bss=${codeBss}&size=20000`
-      ),
-    ])
+
+    const fetchStations = fetch(
+      `https://hubeau.eaufrance.fr/api/v1/niveaux_nappes/stations?code_bss=${codeBss}&fields=profondeur_investigation`,
+      { compress: true }
+    );
+    const fetchChroniques = fetch(
+      `https://hubeau.eaufrance.fr/api/v1/niveaux_nappes/chroniques?code_bss=${codeBss}&fields=date_mesure%2Cprofondeur_nappe&size=8500`,
+      { compress: true }
+    );
+
+    Promise.all([fetchStations, fetchChroniques])
       .then(([stationsResponse, chroniquesResponse]) =>
         Promise.all([stationsResponse.json(), chroniquesResponse.json()])
       )
@@ -49,6 +53,7 @@ function PagePrincipale() {
           dataChronique={chroniquesData.data}
           dataStation={stationsData.data}
         />
+        <Footer />
       </div>
       <Map />
     </main>

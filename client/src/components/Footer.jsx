@@ -3,17 +3,23 @@ import "./styles/footer.css";
 
 function Footer() {
   return (
-    <div className="parent-nav">
-      {/* changer la direction !!!! */}
-      <NavLink className="boutton-a-props" to="/map">
-        {" "}
-        A propos{" "}
-      </NavLink>
-
-      <NavLink className="boutton-carte" to="/map">
-        {" "}
-        Carte{" "}
-      </NavLink>
+    <div className="footer-container">
+      <div className="button-container">
+        {/* changer la direction !!!! */}
+        <NavLink className="button-footer" to="/map">
+          {" "}
+          Carte{" "}
+        </NavLink>
+        <NavLink className="button-footer" to="/legalmentions">
+          {" "}
+          Mentions légales{" "}
+        </NavLink>
+        <NavLink className="button-footer" to="/a-propos">
+          {" "}
+          A propos{" "}
+        </NavLink>
+      </div>
+      <p className="copyright">© 2024 - H2Overflow - Tous droits réservés</p>
     </div>
   );
 }
