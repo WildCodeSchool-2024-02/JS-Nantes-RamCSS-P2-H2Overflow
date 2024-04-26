@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 
-function TextPageLoader() {
+function TextPageLoader({ stationData }) {
   // * code en attente pour annimation
   // const { setIsAnimating } = useContext(AnimationContext);
 
@@ -18,13 +18,12 @@ function TextPageLoader() {
     <section className="section_loader">
       <h2 className="h2-loader">Découvrez les profondeurs invisibles</h2>
       <p className="p-loader">
-        Explorez les nappes phréatiques pour comprendre
-        <br />
-        leur importance et leur préservation.
-        <br />
-        <br />
-        Notre base de données est composée de 1000 tableaux de sources
-        différentes.
+        Explorez les nappes phréatiques pour comprendre leur importance et leur
+        préservation.
+      </p>
+      <p className="p-loader">
+        En France, au 1er janvier 2024, {stationData} nappes phréatiques ont été
+        analysées.
       </p>
       <NavLink className="button" to="/map">
         Accéder aux données

@@ -1,9 +1,9 @@
 import "./styles/Groundwatercard.css";
-import { station, chroniques } from "../data";
 
-function Groundwatercard() {
-  const profondeurNappe = chroniques[0].profondeur_nappe;
-  const profondeurInvestigation = station[0].profondeur_investigation;
+function Groundwatercard({ nappeProfondeur, investigationNappe }) {
+  // const profondeurNappe = chroniques[0].profondeur_nappe;
+  const profondeurNappe = nappeProfondeur;
+  const profondeurInvestigation = investigationNappe;
 
   const percentage = Math.round(
     ((profondeurInvestigation - profondeurNappe) / profondeurInvestigation) *
@@ -15,7 +15,9 @@ function Groundwatercard() {
 
   return (
     <div className="card-container">
-      <p className="legend-card">Taux de remplissage actuel</p>
+      <p className="legend-card">
+        Taux de remplissage lors de la dernière mesure:
+      </p>
       <div className="card-visual-level">
         <div className="percentage-box">
           <p className="percentage-text">{percentage}%</p>
