@@ -5,6 +5,7 @@ import Groundwatercard from "../components/Groundwatercard";
 import Chartcard from "../components/ChartCard";
 import "../components/styles/PagePrincipale.css";
 import "../components/styles/header.css";
+import NapeHome from "../components/NapeHome";
 import Spinner from "../components/Spinner";
 
 function PagePrincipale() {
@@ -49,6 +50,7 @@ function PagePrincipale() {
           nappeProfondeur={chroniquesData.data[0].profondeur_nappe}
           investigationNappe={stationsData.data[0].profondeur_investigation}
         />
+        <NapeHome />
         <Chartcard
           dataChronique={chroniquesData.data}
           dataStation={stationsData.data}

@@ -1,25 +1,57 @@
-/* La card dans mention légales  */
+/* .width  */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 90%;
+}
+
+/* Track  */
+::-webkit-scrollbar-track {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background: rgb(121, 194, 208);
+}
+
+/* Handle on hover  */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(83, 168, 182);
+}
+.text {
+  display: flex;
+  font-size: 25px;
+  margin-top: 3rem;
+  margin-left: 1rem;
+  flex-flow: wrap;
+  line-height: 2;
+  flex-direction: column;
+}
+
 .card {
-  width: 113rem;
-  height: 42rem;
-  margin: auto;
-  margin-top: 5rem;
+  margin-top: 2rem;
+  width: 114rem;
+  height: 575px;
   background-color: rgba(255, 255, 255, 0.45);
   backdrop-filter: blur(2px);
   border-radius: 20px;
   box-shadow: 0px 0px 5px gray;
   color: black;
-  font-size: 25px;
-  text-align: center;
-  text-shadow: 0px 0px px gray;
-  padding-top: 2rem;
+  font-size: 20px;
+  text-align: left;
+  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex-wrap: wrap;
 }
-/* le titre de mention légales */
+
 .mentionlegaltitre {
-  color: black;
+  display: flex;
+  position: absolute;
+  margin-top: -60px;
+  margin-left: 880px;
+  font-size: 34px;
 }
-/* Paragraphe dans mention légales */
-.mentionlegalp {
-  text-align: center;
-}
-/* en dessous sa FOOTER*/
