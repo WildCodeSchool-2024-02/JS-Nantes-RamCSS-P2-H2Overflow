@@ -10,16 +10,16 @@ function PagePrincipale() {
   const [isLoading, setIsLoading] = useState(true);
   const [stationsData, setStationsData] = useState(null);
   const [chroniquesData, setChroniquesData] = useState(null);
-  const codeBss = "01142X0137/RIP100";
+  const codeBss = "00147D0218/P1";
 
   useEffect(() => {
     setIsLoading(true);
     Promise.all([
       fetch(
-        `https://hubeau.eaufrance.fr/api/v1/niveaux_nappes/stations?code_bss=${codeBss}&format=json&size=20`
+        `https://hubeau.eaufrance.fr/api/v1/niveaux_nappes/stations?code_bss=${codeBss}`
       ),
       fetch(
-        `https://hubeau.eaufrance.fr/api/v1/niveaux_nappes/chroniques?code_bss=${codeBss}&size=20000`
+        `https://hubeau.eaufrance.fr/api/v1/niveaux_nappes/chroniques?code_bss=${codeBss}&size=12284`
       ),
     ])
       .then(([stationsResponse, chroniquesResponse]) =>

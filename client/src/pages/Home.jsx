@@ -13,7 +13,7 @@ function Home() {
 
   useEffect(() => {
     fetch(
-      "https://hubeau.eaufrance.fr/api/v1/niveaux_nappes/stations?date_recherche=2024-01-01&format=json&size=20000"
+      "https://hubeau.eaufrance.fr/api/v1/niveaux_nappes/stations?date_recherche=2024-01-01&format=json&size=2879"
     )
       .then((response) => response.json())
       .then((resstationData) => {
