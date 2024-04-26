@@ -1,19 +1,41 @@
-.boutton-a-props {
+.footer-container {
+  width: 446px;
+  height: 100px;
+  font-family: "figtree", sans-serif;
   display: flex;
-  position: relative;
-  margin-bottom: 0;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 50px;
+}
+
+.button-footer {
+  font-size: 20px;
+  color: black;
   text-decoration: none;
-  padding-left: 5rem;
-  font-size: 2rem;
+}
+
+.copyright {
+  font-size: 10px;
+}
+
+.boutton-a-props {
+  /* display: flex; */
+  /* position: relative; */
+  /* margin-bottom: 0; */
+  /* padding-left: 5rem; */
 }
 
 .boutton-carte {
   display: flex;
   text-decoration: none;
   padding-left: 25px;
-  font-size: 2rem;
-}
-.parent-nav {
-  display: flex;
-  flex-direction: row;
+  /* font-size: 2rem; */
 }
