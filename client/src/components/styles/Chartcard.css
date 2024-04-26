@@ -14,7 +14,7 @@
 }
 
 .chart {
-  font-family: "Cabin";
+  font-family: "figtree", sans-serif;
   position: initial;
   max-width: 420px;
   max-height: max-content;
