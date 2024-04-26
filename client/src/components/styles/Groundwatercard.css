@@ -10,7 +10,7 @@
 }
 
 .legend-card {
-  font-family: "Cabin";
+  font-family: "figtree", sans-serif;
   padding-right: 16px;
 }
 
@@ -41,7 +41,7 @@
   margin-top: 0;
   width: 109px;
   font-size: 40px;
-  font-family: "Cabin";
+  font-family: "Cabin", sans-serif;
   font-weight: 700;
   word-wrap: break-word;
   line-height: normal;
