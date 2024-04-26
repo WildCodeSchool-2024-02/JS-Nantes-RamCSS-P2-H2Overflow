@@ -12,13 +12,13 @@ function PagePrincipale() {
   const [isLoading, setIsLoading] = useState(true);
   const [stationsData, setStationsData] = useState(null);
   const [chroniquesData, setChroniquesData] = useState(null);
-  const codeBss = "00692X0062/P";
+  const codeBss = "00147D0218/P1";
 
   useEffect(() => {
     setIsLoading(true);
 
     const fetchStations = fetch(
-      `https://hubeau.eaufrance.fr/api/v1/niveaux_nappes/stations?code_bss=${codeBss}&fields=profondeur_investigation`,
+      `https://hubeau.eaufrance.fr/api/v1/niveaux_nappes/stations?code_bss=${codeBss}&fields=profondeur_investigation%2Cdate_debut_mesure%2Cdate_fin_mesure%2Cnom_commune%2Cnom_departement%2Clibelle_pe`,
       { compress: true }
     );
     const fetchChroniques = fetch(
@@ -50,7 +50,14 @@ function PagePrincipale() {
           nappeProfondeur={chroniquesData.data[0].profondeur_nappe}
           investigationNappe={stationsData.data[0].profondeur_investigation}
         />
-        <NapeHome />
+        <NapeHome
+          ville={stationsData.data[0].nom_commune}
+          departement={stationsData.data[0].nom_departement}
+          dateDebut={stationsData.data[0].date_debut_mesure}
+          dateFin={stationsData.data[0].date_fin_mesure}
+          profondeur={stationsData.data[0].profondeur_investigation}
+          nomNappe={stationsData.data[0].libelle_pe}
+        />
         <Chartcard
           dataChronique={chroniquesData.data}
           dataStation={stationsData.data}
