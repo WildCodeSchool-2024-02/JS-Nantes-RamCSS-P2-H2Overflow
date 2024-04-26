@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 
-function TextPageLoader({ stationData }) {
+function TextPageLoader({ stationData, moyenneProfondeur }) {
   // * code en attente pour annimation
   // const { setIsAnimating } = useContext(AnimationContext);
 
@@ -23,7 +23,7 @@ function TextPageLoader({ stationData }) {
       </p>
       <p className="p-loader">
         En France, au 1er janvier 2024, {stationData} nappes phréatiques ont été
-        analysées.
+        analysées. La moyenne de toutes ces nappes est de {moyenneProfondeur}%.
       </p>
       <NavLink className="button" to="/map">
         Accéder aux données

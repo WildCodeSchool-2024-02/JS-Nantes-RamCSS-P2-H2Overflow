@@ -13,7 +13,7 @@ function Home() {
 
   useEffect(() => {
     fetch(
-      "https://hubeau.eaufrance.fr/api/v1/niveaux_nappes/stations?date_recherche=2024-01-01&format=json&size=2879"
+      "https://hubeau.eaufrance.fr/api/v1/niveaux_nappes/stations?date_recherche=2024-01-01&format=json&size=3000"
     )
       .then((response) => response.json())
       .then((resstationData) => {
@@ -32,23 +32,22 @@ function Home() {
     return <Spinner />;
   }
 
-  // en attente pour le .map
+  // Calcul du pourcentage moyen de la profondeur d'investigation
+  const profondeurs = stationData.data.map(
+    (station) => station.profondeur_investigation
+  );
 
-  // let profondeurNappe = 0;
-  // // let calcul = 0;
-  // const profondeurNappeArray = [];
+  // Calcul de la moyenne
+  const moyenneProfondeur =
+    profondeurs.reduce((acc, curr) => acc + curr, 0) / profondeurs.length;
+  const pourcentageArrondi = Math.round(moyenneProfondeur);
 
-  // for (let i = 0; i < stationData.data.length; i += 1) {
-  //   if (stationData.data[i].profondeur_investigation) {
-  //     const nappeArray = stationData.data[i].profondeur_investigation;
-  //     profondeurNappe += nappeArray;
-  //     // calcul = profondeurNappe / stationData.data.length;
-
-  //     profondeurNappeArray.push(nappeArray);
-  //   }
-  // }
-
-  return <TextPageLoader stationData={stationData.data.length} />;
+  return (
+    <TextPageLoader
+      stationData={stationData.data.length}
+      moyenneProfondeur={pourcentageArrondi}
+    />
+  );
 }
 
 export default Home;
