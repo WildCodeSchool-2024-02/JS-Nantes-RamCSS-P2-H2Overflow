@@ -11,13 +11,13 @@ function PagePrincipale() {
   const [isLoading, setIsLoading] = useState(true);
   const [stationsData, setStationsData] = useState(null);
   const [chroniquesData, setChroniquesData] = useState(null);
-  const codeBss = "01142X0137/RIP100";
+  const codeBss = "00147D0218/P1";
 
   useEffect(() => {
     setIsLoading(true);
     Promise.all([
       fetch(
-        `https://hubeau.eaufrance.fr/api/v1/niveaux_nappes/stations?code_bss=${codeBss}&format=json&size=20`
+        `https://hubeau.eaufrance.fr/api/v1/niveaux_nappes/stations?code_bss=${codeBss}&size=20`
       ),
       fetch(
         `https://hubeau.eaufrance.fr/api/v1/niveaux_nappes/chroniques?code_bss=${codeBss}&size=20000`
@@ -42,12 +42,11 @@ function PagePrincipale() {
   ) : (
     <main className="main">
       <div className="groundwater-chartcard">
-        <NapeHome />
-        <Chartcard />
         <Groundwatercard
           nappeProfondeur={chroniquesData.data[0].profondeur_nappe}
           investigationNappe={stationsData.data[0].profondeur_investigation}
         />
+        <NapeHome />
         <Chartcard
           dataChronique={chroniquesData.data}
           dataStation={stationsData.data}

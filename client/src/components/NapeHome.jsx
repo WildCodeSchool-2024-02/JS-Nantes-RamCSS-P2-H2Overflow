@@ -2,7 +2,7 @@ import "./styles/NapeHome.css";
 import { useEffect, useState } from "react";
 
 function NapeHome() {
-  const [villeData, setvilleData] = useState(null);
+  const [ setvilleData] = useState(null);
   const [iseloading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -24,7 +24,7 @@ function NapeHome() {
     <div className="nape-home">
       <h2 className="titre-nape">Nom de la nappe</h2>
       <p className="P">
-        Cette nappe se trouve sur la commune de {villeData} dans le departement
+        {/* Cette nappe se trouve sur la commune de {villeData} dans le departement */}
         de Loire Atlantique <br />
         Le dernier relevé sur cette nappe a été réalisé le 25/04/2024 <br />
         Cette nappe est en activité depuis le xx/xx/xxxx et sa profondeur est de
