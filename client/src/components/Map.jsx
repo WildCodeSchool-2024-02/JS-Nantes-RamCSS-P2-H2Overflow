@@ -2,7 +2,13 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "./styles/PagePrincipale.css";
 
 function Map({ dataMappy }) {
-  const dataReady = dataMappy.data.filter((el) => el.geometry);
+  const dataReady = dataMappy.data.filter(
+    (el) =>
+      el.geometry &&
+      el.profondeur_investigation &&
+      el.nom_commune &&
+      el.nom_departement
+  );
 
   return (
     <div className="map-leaflet">
@@ -18,7 +24,12 @@ function Map({ dataMappy }) {
             position={[el.geometry.coordinates[1], el.geometry.coordinates[0]]}
             riseOnHover
           >
-            <Popup>Nappe phréatique tointoin les bains.</Popup>
+            <Popup className="popup">
+              <p className="inside-popup">
+                Nappe phréatique <br />
+                ville : {el.nom_commune}, {el.nom_departement}
+              </p>
+            </Popup>
           </Marker>
         ))}
       </MapContainer>
