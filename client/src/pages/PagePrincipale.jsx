@@ -14,6 +14,7 @@ function PagePrincipale() {
   const [isLoading, setIsLoading] = useState(true);
   const [stationsData, setStationsData] = useState(null);
   const [chroniquesData, setChroniquesData] = useState(null);
+  // const [count, setonClickBssr}] = useState({ pokemonList });
   const codeBss = "00692X0062/P";
 
   useEffect(() => {

@@ -9,6 +9,7 @@ function Map({ dataMappy }) {
       el.nom_commune &&
       el.nom_departement
   );
+  // onClick={setonClickBssr}
 
   return (
     <div className="map-leaflet">
@@ -27,7 +28,7 @@ function Map({ dataMappy }) {
             <Popup className="popup">
               <p className="inside-popup">
                 Nappe phréatique <br />
-                ville : {el.nom_commune}, {el.nom_departement}
+                {el.nom_commune}, {el.nom_departement}
               </p>
             </Popup>
           </Marker>
