@@ -17,7 +17,9 @@ function PagePrincipale() {
   const codeBss = "00147D0218/P1";
 
   useEffect(() => {
-    fetch("https://hubeau.eaufrance.fr/api/v1/niveaux_nappes/stations")
+    fetch(
+      "https://hubeau.eaufrance.fr/api/v1/niveaux_nappes/stations?size=1000"
+    )
       .then((response) => response.json())
       .then((resdataMap) => {
         setdataMap(resdataMap);
