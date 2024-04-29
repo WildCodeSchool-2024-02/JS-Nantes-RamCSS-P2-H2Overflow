@@ -14,7 +14,7 @@ function PagePrincipale() {
   const [isLoading, setIsLoading] = useState(true);
   const [stationsData, setStationsData] = useState(null);
   const [chroniquesData, setChroniquesData] = useState(null);
-  const codeBss = "00147D0218/P1";
+  const codeBss = "03124X0088/F";
 
   useEffect(() => {
     fetch(
