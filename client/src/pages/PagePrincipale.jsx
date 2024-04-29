@@ -9,12 +9,10 @@ import ContainerComposant from "../components/ContainerComposant";
 function PagePrincipale() {
   const [isLoadingMap, setIsLoadingMap] = useState(true);
   const [dataMap, setdataMap] = useState();
-  // const [codeBss, setCodeBss] = useState("05373X0545/5411");
+  const [codeBss, setCodeBss] = useState("04518X0045/MSM1");
 
   useEffect(() => {
-    fetch(
-      "https://hubeau.eaufrance.fr/api/v1/niveaux_nappes/stations?format=json&size=1000"
-    )
+    fetch("https://hubeau.eaufrance.fr/api/v1/niveaux_nappes/stations")
       .then((response) => response.json())
       .then((resdataMap) => {
         setdataMap(resdataMap);
@@ -41,7 +39,7 @@ function PagePrincipale() {
         />
         <Footer />
       </div>
-      <Map dataMappy={dataMap} setdataMap={setdataMap} />
+      <Map dataMappy={dataMap} codeBss={codeBss} setCodeBss={setCodeBss} />
     </main>
   );
 }
