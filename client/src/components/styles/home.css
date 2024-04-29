@@ -30,10 +30,12 @@ body {
 }
 
 .p-loader {
+  z-index: 50000;
   margin-bottom: 2rem;
   font-size: 1.4rem;
   text-align: center;
   font-weight: 800;
+  width: 90%;
 }
 
 .button {
