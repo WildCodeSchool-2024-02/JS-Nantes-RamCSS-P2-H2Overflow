@@ -34,7 +34,7 @@ function PagePrincipale() {
         <ContainerComposant
           isLoadingMap={isLoadingMap}
           setIsLoadingMap={setIsLoadingMap}
-          // codeBss={codeBss}
+          codeBss={codeBss}
           dataMap={dataMap}
         />
         <Footer />

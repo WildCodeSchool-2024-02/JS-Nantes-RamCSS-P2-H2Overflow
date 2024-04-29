@@ -52,9 +52,9 @@ function ContainerComposant({ isLoadingMap, codeBss, dataMap }) {
   //   });
 
   // const maVariable = codeBssData.find((el) => el.code_bss === "05068X0028/SP010");
-  const monCodeBss = "05373X0545/5411";
+  // const monCodeBss = "05373X0545/5411";
   // const maBelleVariable = codeBssData.find((el) => el === monCodeBss);
-  const newBss = dataMap.data.find((el) => el.code_bss === monCodeBss);
+  const newBss = dataMap.data.find((el) => el.code_bss === codeBss);
   //   console.log(newBss.profondeur_investigation);
 
   return isLoading ? (
