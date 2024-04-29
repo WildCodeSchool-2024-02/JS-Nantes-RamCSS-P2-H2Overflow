@@ -68,7 +68,7 @@ function Chartcard({ dataChronique, dataStation }) {
   years.forEach((year) => {
     // calculating the average
 
-    const profondeurInvertigationYear = dataStation[0].profondeur_investigation;
+    const profondeurInvertigationYear = dataStation;
 
     const nappeValuesForAverage = nappeValuesByYear[year];
 

@@ -1,19 +1,14 @@
 import { useEffect, useState } from "react";
 import Map from "../components/Map";
 import Footer from "../components/Footer";
-import Groundwatercard from "../components/Groundwatercard";
-import Chartcard from "../components/ChartCard";
 import "../components/styles/PagePrincipale.css";
 import "../components/styles/header.css";
-import NapeHome from "../components/NapeHome";
 import Spinner from "../components/Spinner";
+import ContainerComposant from "../components/ContainerComposant";
 
 function PagePrincipale() {
   const [isLoadingMap, setIsLoadingMap] = useState(true);
   const [dataMap, setdataMap] = useState();
-  const [isLoading, setIsLoading] = useState(true);
-  const [stationsData, setStationsData] = useState(null);
-  const [chroniquesData, setChroniquesData] = useState(null);
   const [codeBss, setCodeBss] = useState("04518X0045/MSM1");
 
   useEffect(() => {
@@ -31,57 +26,16 @@ function PagePrincipale() {
       });
   }, []);
 
-  useEffect(() => {
-    setIsLoading(true);
-
-    const fetchStations = fetch(
-      `https://hubeau.eaufrance.fr/api/v1/niveaux_nappes/stations?code_bss=${codeBss}&fields=profondeur_investigation%2Cdate_debut_mesure%2Cdate_fin_mesure%2Cnom_commune%2Cnom_departement%2Clibelle_pe`,
-      { compress: true }
-    );
-    const fetchChroniques = fetch(
-      `https://hubeau.eaufrance.fr/api/v1/niveaux_nappes/chroniques?code_bss=${codeBss}&fields=date_mesure%2Cprofondeur_nappe&sort=desc&size=8500`,
-      { compress: true }
-    );
-
-    Promise.all([fetchStations, fetchChroniques])
-      .then(([stationsResponse, chroniquesResponse]) =>
-        Promise.all([stationsResponse.json(), chroniquesResponse.json()])
-      )
-      .then(([stationsResData, chroniquesResData]) => {
-        setStationsData(stationsResData);
-        setChroniquesData(chroniquesResData);
-        setIsLoading(false);
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-        setIsLoading(false);
-      });
-  }, [codeBss]);
-
-  if (isLoadingMap) {
-    return <Spinner />;
-  }
-
-  return isLoading ? (
+  return isLoadingMap ? (
     <Spinner />
   ) : (
     <main className="main">
       <div className="groundwater-chartcard">
-        <Groundwatercard
-          nappeProfondeur={chroniquesData.data[0].profondeur_nappe}
-          investigationNappe={stationsData.data[0].profondeur_investigation}
-        />
-        <NapeHome
-          ville={stationsData.data[0].nom_commune}
-          departement={stationsData.data[0].nom_departement}
-          dateDebut={stationsData.data[0].date_debut_mesure}
-          dateFin={stationsData.data[0].date_fin_mesure}
-          profondeur={stationsData.data[0].profondeur_investigation}
-          nomNappe={stationsData.data[0].libelle_pe}
-        />
-        <Chartcard
-          dataChronique={chroniquesData.data}
-          dataStation={stationsData.data}
+        <ContainerComposant
+          isLoadingMap={isLoadingMap}
+          setIsLoadingMap={setIsLoadingMap}
+          codeBss={codeBss}
+          dataMap={dataMap}
         />
         <Footer />
       </div>
