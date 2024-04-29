@@ -1,14 +1,10 @@
 import { useState, useEffect } from "react";
 import TextPageLoader from "../components/TextPageLoader";
-
 import Spinner from "../components/Spinner";
-
 import "../components/styles/home.css";
 
 function Home() {
-  // Utilisez useContext pour accéder au contexte ButtonClickContext
   const [isLoading, setIsLoading] = useState(true);
-
   const [stationData, setStationData] = useState(null);
 
   useEffect(() => {
@@ -25,7 +21,7 @@ function Home() {
           "Une erreur s'est produite lors de la récupération des données:",
           error
         );
-        setIsLoading(false); // Assurez-vous que isLoading est toujours réinitialisé, même en cas d'erreur
+        setIsLoading(false);
       });
   }, []);
   if (isLoading) {

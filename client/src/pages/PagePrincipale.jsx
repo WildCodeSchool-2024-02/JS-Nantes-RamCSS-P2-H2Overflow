@@ -18,7 +18,7 @@ function PagePrincipale() {
 
   useEffect(() => {
     fetch(
-      "https://hubeau.eaufrance.fr/api/v1/niveaux_nappes/stations?size=1000"
+      "https://hubeau.eaufrance.fr/api/v1/niveaux_nappes/stations?format=json&size=1000"
     )
       .then((response) => response.json())
       .then((resdataMap) => {

@@ -19,6 +19,18 @@
   height: 95vh;
   border-radius: 25px;
   margin-top: -138px;
-  margin-right: -21px;
+  margin-right: -38px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.popup {
+  display: flex;
+  text-align: start;
+  line-height: 0.6rem;
+}
+
+.inside-popup {
+  text-align: center;
+  line-height: 2rem;
+  margin: 0%;
 }
