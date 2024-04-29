@@ -1,10 +1,12 @@
 import Footer from "../components/Footer";
 import MentionContent from "../components/MentionContent";
+import VideoPlayer from "../components/styles/eA";
 import "../components/styles/mentionlegal.css";
 
 function MentionsLegales() {
   return (
     <>
+      <VideoPlayer />
       <MentionContent />
       <Footer />
     </>
