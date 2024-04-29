@@ -46,7 +46,7 @@ canvas {
 
 .earth-3D-home {
   width: 100%;
-  z-index: 0;
+  z-index: -5;
   width: 90vw;
   height: 90vh;
   left: 800px;
