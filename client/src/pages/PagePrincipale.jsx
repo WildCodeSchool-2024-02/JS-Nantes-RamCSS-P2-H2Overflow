@@ -5,6 +5,7 @@ import "../components/styles/PagePrincipale.css";
 import "../components/styles/header.css";
 import Spinner from "../components/Spinner";
 import ContainerComposant from "../components/ContainerComposant";
+import "../App.css";
 
 function PagePrincipale() {
   const [isLoadingMap, setIsLoadingMap] = useState(true);
