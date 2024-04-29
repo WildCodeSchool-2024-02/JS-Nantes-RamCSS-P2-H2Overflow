@@ -2,7 +2,7 @@ function MentionContent() {
   const monTab = [
     {
       paragraph:
-        "Éditeur du site : Nom de l'entreprise ou de l'individu Adresse Téléphone Email de contact",
+        "Éditeur du site : Nom de l'entreprise ou de l'individu Adresse Téléphone Email de contact  ",
     },
     { paragraph: "Directeur de publication : Nom du directeur de publication" },
     {
@@ -46,7 +46,13 @@ function MentionContent() {
     <>
       <h1 className="mentionlegaltitre"> Mentions légales </h1>
       <figure className="card">
-        <p className="text">{monTab.map((el) => el.paragraph)}</p>
+        {/* {monTab.map((el) => el.paragraph)} */}
+        {monTab.map((el) => (
+          <p className="text" key="el">
+            {" "}
+            {el.paragraph}
+          </p>
+        ))}
       </figure>
     </>
   );
