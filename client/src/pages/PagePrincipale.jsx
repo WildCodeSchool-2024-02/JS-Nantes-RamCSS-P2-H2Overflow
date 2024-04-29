@@ -14,12 +14,10 @@ function PagePrincipale() {
   const [isLoading, setIsLoading] = useState(true);
   const [stationsData, setStationsData] = useState(null);
   const [chroniquesData, setChroniquesData] = useState(null);
-  const codeBss = "00147D0218/P1";
+  const [codeBss, setCodeBss] = useState("04518X0045/MSM1");
 
   useEffect(() => {
-    fetch(
-      "https://hubeau.eaufrance.fr/api/v1/niveaux_nappes/stations?format=json&size=1000"
-    )
+    fetch("https://hubeau.eaufrance.fr/api/v1/niveaux_nappes/stations")
       .then((response) => response.json())
       .then((resdataMap) => {
         setdataMap(resdataMap);
@@ -41,7 +39,7 @@ function PagePrincipale() {
       { compress: true }
     );
     const fetchChroniques = fetch(
-      `https://hubeau.eaufrance.fr/api/v1/niveaux_nappes/chroniques?code_bss=${codeBss}&fields=date_mesure%2Cprofondeur_nappe&size=8500`,
+      `https://hubeau.eaufrance.fr/api/v1/niveaux_nappes/chroniques?code_bss=${codeBss}&fields=date_mesure%2Cprofondeur_nappe&sort=desc&size=8500`,
       { compress: true }
     );
 
@@ -87,7 +85,7 @@ function PagePrincipale() {
         />
         <Footer />
       </div>
-      <Map dataMappy={dataMap} setdataMap={setdataMap} />
+      <Map dataMappy={dataMap} codeBss={codeBss} setCodeBss={setCodeBss} />
     </main>
   );
 }
