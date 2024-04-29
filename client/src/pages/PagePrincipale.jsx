@@ -9,10 +9,27 @@ import NapeHome from "../components/NapeHome";
 import Spinner from "../components/Spinner";
 
 function PagePrincipale() {
+  const [isLoadingMap, setIsLoadingMap] = useState(true);
+  const [dataMap, setdataMap] = useState();
   const [isLoading, setIsLoading] = useState(true);
   const [stationsData, setStationsData] = useState(null);
   const [chroniquesData, setChroniquesData] = useState(null);
   const codeBss = "00147D0218/P1";
+
+  useEffect(() => {
+    fetch("https://hubeau.eaufrance.fr/api/v1/niveaux_nappes/stations")
+      .then((response) => response.json())
+      .then((resdataMap) => {
+        setdataMap(resdataMap);
+        setIsLoadingMap(false);
+      })
+      .catch((error) => {
+        console.error(
+          "Une erreur s'est produite lors de la récupération des données:",
+          error
+        );
+      });
+  }, []);
 
   useEffect(() => {
     setIsLoading(true);
@@ -41,6 +58,10 @@ function PagePrincipale() {
       });
   }, [codeBss]);
 
+  if (isLoadingMap) {
+    return <Spinner />;
+  }
+
   return isLoading ? (
     <Spinner />
   ) : (
@@ -64,7 +85,7 @@ function PagePrincipale() {
         />
         <Footer />
       </div>
-      <Map />
+      <Map dataMappy={dataMap} setdataMap={setdataMap} />
     </main>
   );
 }
