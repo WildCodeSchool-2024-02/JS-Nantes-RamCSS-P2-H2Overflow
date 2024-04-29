@@ -1,0 +1,23 @@
+/* containeur  */
+.eastereggs {
+  position: absolute;
+  padding-left: 65rem;
+  /* padding-top: -2px; */
+  /* text-decoration: none; */
+  color: #84c7d4;
+}
+/* boutton */
+
+.easter {
+  margin-top: -52px;
+  position: absolute;
+  color: #84c7d4;
+  all: unset;
+}
+
+.frame {
+  position: absolute;
+  margin-left: -37rem;
+  position: relative;
+  z-index: 10;
+}
