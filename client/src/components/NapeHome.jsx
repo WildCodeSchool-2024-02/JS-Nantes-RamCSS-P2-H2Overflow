@@ -2,7 +2,7 @@ import "./styles/NapeHome.css";
 import { useEffect, useState } from "react";
 
 function NapeHome() {
-  const [ setvilleData] = useState(null);
+  const [setvilleData] = useState(null);
   const [iseloading, setIsLoading] = useState(true);
 
   useEffect(() => {
