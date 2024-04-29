@@ -7,8 +7,6 @@
 }
 
 .svg-spinner {
-  background-size: 150vw;
-  background-position: right;
   width: 100vw;
   height: 100vh;
   z-index: 11000;
