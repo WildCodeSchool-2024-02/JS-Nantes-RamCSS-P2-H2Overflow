@@ -30,11 +30,11 @@
   flex-direction: column;
   align-items: center;
   gap: 30px;
+  margin-top: -10px;
 }
 
 h2,
 h3 {
-  font-size: 32px;
   font-family: "Cabin", sans-serif;
 }
 
@@ -62,8 +62,13 @@ ul {
   overflow: hidden;
 }
 
+h2 {
+  font-size: 40px;
+}
+
 h3 {
   text-align: center;
+  font-size: 32px;
 }
 
 .text-element {
