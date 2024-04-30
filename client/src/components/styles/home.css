@@ -29,6 +29,7 @@ body {
 .h2-loader {
   font-size: 3rem;
   margin-bottom: 1rem;
+  font-weight: 600;
 }
 
 .p-loader {
@@ -36,13 +37,13 @@ body {
   margin-bottom: 2rem;
   font-size: 1.4rem;
   text-align: center;
-  font-weight: 800;
+  font-weight: 600;
   width: 90%;
 }
 
 .button {
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 1.6rem;
   background-color: #bbe4e9;
   padding: 15px;
   border-radius: 15px;
