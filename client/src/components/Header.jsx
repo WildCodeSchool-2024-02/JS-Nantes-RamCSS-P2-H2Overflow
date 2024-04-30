@@ -84,7 +84,7 @@ function Header() {
     <header
       className={`header ${location.pathname === "/" ? "header-home" : ""}`}
     >
-      <h1 className={`header ${location.pathname === "/" ? "h1-home" : ""}`}>
+      <h1 className={`header ${location.pathname === "/" ? "h1-home" : "h1"}`}>
         H
         <div
           className={`header ${location.pathname === "/" ? "h2o" : "h2o-home"}`}
