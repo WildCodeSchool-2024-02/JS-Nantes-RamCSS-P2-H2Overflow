@@ -44,16 +44,18 @@ function MentionContent() {
   ];
   return (
     <>
-      <h1 className="mentionlegaltitre"> Mentions légales </h1>
-      <figure className="card">
-        {/* {monTab.map((el) => el.paragraph)} */}
-        {monTab.map((el) => (
-          <p className="text" key="el">
-            {" "}
-            {el.paragraph}
-          </p>
-        ))}
-      </figure>
+      <h2 className="mentionlegaltitre"> Mentions légales </h2>
+      <div className="mention-legale">
+        <figure className="card">
+          {/* {monTab.map((el) => el.paragraph)} */}
+          {monTab.map((el) => (
+            <p className="text" key="el">
+              {" "}
+              {el.paragraph}
+            </p>
+          ))}
+        </figure>
+      </div>
     </>
   );
 }

@@ -60,6 +60,7 @@ ul {
   border-radius: 20px;
   backdrop-filter: blur(8px);
   overflow: hidden;
+  box-shadow: 0px 0px 5px gray;
 }
 
 h2 {
