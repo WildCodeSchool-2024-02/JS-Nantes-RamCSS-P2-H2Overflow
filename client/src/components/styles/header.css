@@ -8,6 +8,12 @@ header {
   align-items: center;
 }
 
+.h2o {
+  display: inline;
+  top: 70px;
+  position: relative;
+}
+
 .earth-3D {
   width: 100%;
 }
@@ -34,6 +40,7 @@ canvas {
   font-weight: 800;
   letter-spacing: 5px;
   animation: 1000ms aparition-h1 ease-in-out;
+  transition: 2s;
 }
 
 /****************************header-home*****************************************/
@@ -44,6 +51,11 @@ canvas {
   padding-top: 50px;
 }
 
+.h2o-home {
+  display: inline;
+  top: 20px;
+  position: relative;
+}
 .earth-3D-home {
   width: 100%;
   z-index: -5;
@@ -73,13 +85,14 @@ canvas {
 .h1-home {
   position: relative;
   z-index: 1;
-  font-family: "figtree", sans-serif;
+  font-family: "cabin", sans-serif;
   font-size: 6rem;
   font-weight: 800;
   letter-spacing: 10px;
   animation: 1000ms aparition-h1 ease-in-out;
   top: -50px;
   left: 6rem;
+  transition: 2s;
 }
 
 @keyframes earth-appearance {

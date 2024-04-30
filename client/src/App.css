@@ -5,3 +5,17 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.svg-spinner {
+  width: 100vw;
+  height: 100vh;
+  z-index: 11000;
+}
+
+.svg-spinner-composant {
+  width: 445px;
+
+  /* !a ajuster en fonction deu footer */
+  height: 630px;
+  border: 1px solid black;
+}
