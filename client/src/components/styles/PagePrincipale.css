@@ -15,10 +15,13 @@
 .leaflet-container {
   width: 61vw;
   height: 95vh;
+  margin-top: -125px;
   border-radius: 25px;
-  margin-top: -138px;
-  margin-right: -38px;
+  margin-right: -88px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.leaflet-container {
 }
 
 .popup {
@@ -28,6 +31,8 @@
 }
 
 .inside-popup {
+  font-family: "figtree", sans-serif;
+  font-size: 1rem;
   text-align: center;
   line-height: 2rem;
   margin: 0%;

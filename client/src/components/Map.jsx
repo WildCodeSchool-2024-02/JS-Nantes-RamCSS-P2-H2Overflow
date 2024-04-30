@@ -34,7 +34,9 @@ function Map({ dataMappy, setCodeBss }) {
             <Popup className="popup">
               <p className="inside-popup">
                 Nappe phréatique <br />
-                {el.nom_commune}, {el.nom_departement}
+                <b>
+                  {el.nom_commune}, {el.nom_departement}
+                </b>
               </p>
             </Popup>
           </Marker>

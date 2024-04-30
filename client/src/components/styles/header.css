@@ -90,7 +90,7 @@ canvas {
   font-weight: 800;
   letter-spacing: 10px;
   animation: 1000ms aparition-h1 ease-in-out;
-  top: -50px;
+  top: -20px;
   left: 6rem;
   transition: 2s;
 }
