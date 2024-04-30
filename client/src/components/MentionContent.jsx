@@ -1,5 +1,3 @@
-import "../App.css";
-
 function MentionContent() {
   const monTab = [
     {
@@ -46,7 +44,7 @@ function MentionContent() {
   ];
   return (
     <>
-      <h1 className="mentionlegaltitre"> Mentions légales </h1>
+      <h2 className="mentionlegaltitre"> Mentions légales </h2>
       <div className="mention-legale">
         <figure className="card">
           {/* {monTab.map((el) => el.paragraph)} */}
