@@ -21,21 +21,35 @@
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(83, 168, 182);
 }
-.text {
+
+.mentionlegaltitre {
+  margin-top: -60px;
+  font-size: 40px;
+  text-align: center;
+  font-family: cabin sans-serif;
+}
+
+.mention-legale {
+  width: 100%;
   display: flex;
-  font-size: 25px;
-  margin-top: 3rem;
-  margin-left: 1rem;
-  flex-flow: wrap;
-  line-height: 2;
   flex-direction: column;
-  line-height: 1;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 20px;
+}
+
+.text {
+  font-size: 20px;
+  margin-top: 3rem;
+  line-height: 1.2;
+  padding: 0 30px;
 }
 
 .card {
   margin-top: 2rem;
-  width: 105rem;
-  height: 575px;
+  width: 1600px;
+  height: 600px;
   background-color: rgba(255, 255, 255, 0.45);
   backdrop-filter: blur(2px);
   border-radius: 25px;
@@ -47,13 +61,4 @@
   overflow-y: auto;
   overflow-x: hidden;
   flex-wrap: wrap;
-  padding: 15px;
-}
-
-.mentionlegaltitre {
-  display: flex;
-  position: absolute;
-  margin-top: -60px;
-  margin-left: 880px;
-  font-size: 34px;
 }

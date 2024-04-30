@@ -35,7 +35,7 @@ canvas {
   position: relative;
   left: -60px;
   z-index: 1;
-  font-family: "figtree", sans-serif;
+  font-family: "cabin", sans-serif;
   font-size: 3rem;
   font-weight: 800;
   letter-spacing: 5px;
@@ -163,9 +163,3 @@ canvas {
     transform: translatey(0%);
   }
 }
-
-/* bloquer le scroll */
-
-/* .header {
-  overflow-x: clip;
-} */
