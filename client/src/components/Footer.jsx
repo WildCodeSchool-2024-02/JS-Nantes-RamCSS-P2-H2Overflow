@@ -3,7 +3,7 @@ import "./styles/footer.css";
 
 function Footer() {
   return (
-    <div className="footer-container">
+    <footer className="footer-container">
       <div className="button-container">
         {/* changer la direction !!!! */}
         <NavLink className="button-footer" to="/map">
@@ -20,7 +20,7 @@ function Footer() {
         </NavLink>
       </div>
       <p className="copyright">© 2024 - H2Overflow - Tous droits réservés</p>
-    </div>
+    </footer>
   );
 }
 export default Footer;

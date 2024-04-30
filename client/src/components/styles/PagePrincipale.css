@@ -10,8 +10,6 @@
 .groundwater-chartcard {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  margin-top: -30px;
 }
 
 .leaflet-container {
@@ -33,4 +31,10 @@
   text-align: center;
   line-height: 2rem;
   margin: 0%;
+}
+
+Footer {
+  /* position: absolute; */
+  /* bottom: 0; */
+  /* margin-bottom: 600; */
 }
