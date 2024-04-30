@@ -4,6 +4,7 @@ import NapeHome from "./NapeHome";
 import Groundwatercard from "./Groundwatercard";
 import Spinner from "./Spinner";
 import "./styles/PagePrincipale.css";
+import "./styles/containerComposant.css";
 
 function ContainerComposant({ isLoadingMap, codeBss, dataMap }) {
   const [chroniquesData, setChroniquesData] = useState(null);
@@ -43,7 +44,7 @@ function ContainerComposant({ isLoadingMap, codeBss, dataMap }) {
   return isLoading ? (
     <Spinner />
   ) : (
-    <div className="groundwater-chartcard">
+    <div className="container-composants">
       <Groundwatercard
         nappeProfondeur={chroniquesData.data[0].profondeur_nappe}
         investigationNappe={newBss.profondeur_investigation}
