@@ -10,7 +10,7 @@ function Footer() {
           {" "}
           Carte{" "}
         </NavLink>
-        <NavLink className="button-footer" to="/mentionslegale">
+        <NavLink className="button-footer" to="/mentions-legales">
           {" "}
           Mentions légales{" "}
         </NavLink>
