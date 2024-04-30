@@ -29,18 +29,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: -50px;
+  gap: 30px;
+  margin-top: -10px;
 }
 
 h2,
 h3 {
-  font-size: 32px;
   font-family: "Cabin", sans-serif;
 }
 
 p,
 li {
   font-family: "figtree", sans-serif;
+}
+
+ul {
+  padding-left: 50px;
 }
 
 .height-scrollbar {
@@ -58,13 +62,22 @@ li {
   overflow: hidden;
 }
 
+h2 {
+  font-size: 40px;
+}
+
 h3 {
   text-align: center;
+  font-size: 32px;
 }
 
 .text-element {
   padding: 0 30px;
   font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-top: 50px;
 }
 
 .calcul {

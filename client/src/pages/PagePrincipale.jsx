@@ -30,18 +30,20 @@ function PagePrincipale() {
   return isLoadingMap ? (
     <Spinner />
   ) : (
-    <main className="main">
-      <div className="groundwater-chartcard">
-        <ContainerComposant
-          isLoadingMap={isLoadingMap}
-          setIsLoadingMap={setIsLoadingMap}
-          codeBss={codeBss}
-          dataMap={dataMap}
-        />
-        <Footer />
-      </div>
-      <Map dataMappy={dataMap} codeBss={codeBss} setCodeBss={setCodeBss} />
-    </main>
+    <>
+      <main className="main">
+        <div className="groundwater-chartcard">
+          <ContainerComposant
+            isLoadingMap={isLoadingMap}
+            setIsLoadingMap={setIsLoadingMap}
+            codeBss={codeBss}
+            dataMap={dataMap}
+          />
+        </div>
+        <Map dataMappy={dataMap} codeBss={codeBss} setCodeBss={setCodeBss} />
+      </main>
+      <Footer />
+    </>
   );
 }
 
