@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import TextPageLoader from "../components/TextPageLoader";
 import Spinner from "../components/Spinner";
 import "../components/styles/home.css";
+import "../App.css";
 
 function Home() {
   const [isLoading, setIsLoading] = useState(true);

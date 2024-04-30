@@ -1,7 +1,8 @@
+/* eslint-disable no-restricted-globals */
 function Spinner() {
   return (
     <svg
-      className="svg-spinner"
+      className={`header ${location.pathname === "/" ? "svg-spinner" : "svg-spinner-composant"}`}
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
